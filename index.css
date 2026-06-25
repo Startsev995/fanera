@@ -1,0 +1,406 @@
+/* ============================================
+   ГЛАВНАЯ СТРАНИЦА
+   ============================================ */
+
+/* ----- HERO СЕКЦИЯ ----- */
+.hero-section {
+    position: relative;
+    min-height: 910px;
+    background: var(--color-primary);
+    overflow: hidden;
+    padding: 36px 0 0;
+}
+
+.hero-section .hero-bg-shape {
+    position: absolute;
+    width: 1083.08px;
+    height: 1337.51px;
+    right: -200px;
+    top: -324.84px;
+    background: var(--color-secondary);
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.hero-section .hero-blur {
+    position: absolute;
+    width: 607.57px;
+    height: 362.40px;
+    right: 100px;
+    top: 316.16px;
+    transform: rotate(35deg);
+    opacity: 0.70;
+    background: #080809;
+    border-radius: var(--radius-full);
+    filter: blur(100px);
+    pointer-events: none;
+}
+
+.hero-section .hero-title {
+    font-family: var(--font-primary);
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 68.65px;
+    color: var(--color-white);
+    max-width: 694px;
+}
+
+.hero-section .hero-description {
+    font-family: var(--font-primary);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 23.76px;
+    color: var(--color-white);
+    max-width: 524px;
+}
+
+.hero-section .hero-phone {
+    font-family: var(--font-primary);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 31.69px;
+    color: var(--color-white);
+}
+
+.hero-section .hero-address {
+    font-family: var(--font-primary);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 25.6px;
+    color: rgba(255, 255, 255, 0.6);
+    max-width: 560px;
+}
+
+.hero-section .hero-image {
+    position: absolute;
+    right: 100px;
+    top: 228px;
+    width: 883px;
+    height: 510px;
+    object-fit: cover;
+    z-index: 2;
+}
+
+.hero-section .hero-outline {
+    position: absolute;
+    right: 80px;
+    top: 324.5px;
+    width: 392.77px;
+    height: 191px;
+    border: 1px solid var(--color-white);
+    z-index: 1;
+}
+
+.hero-section .hero-label {
+    position: absolute;
+    right: 120px;
+    top: 205.5px;
+    z-index: 3;
+    text-align: right;
+}
+
+.hero-section .hero-label .label-title {
+    font-family: var(--font-primary);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30.3px;
+    color: var(--color-white);
+}
+
+.hero-section .hero-label .label-sub {
+    font-family: var(--font-primary);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24.24px;
+    color: rgba(255, 255, 255, 0.79);
+}
+
+.hero-section .lang-switch {
+    padding: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.hero-section .lang-switch .lang-active {
+    color: var(--color-white);
+    font-family: var(--font-primary);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 26.4px;
+}
+
+.hero-section .lang-switch .lang-inactive {
+    color: rgba(255, 255, 255, 0.6);
+    font-family: var(--font-primary);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 26.4px;
+}
+
+.hero-section .lang-switch .lang-divider {
+    color: rgba(255, 255, 255, 0.5);
+    font-family: var(--font-primary);
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 26.4px;
+}
+
+/* ----- СЕКЦИЯ "ЧТО МЫ ИЗГОТАВЛИВАЕМ" ----- */
+.products-section {
+    padding: 100px 0 0;
+}
+
+.products-section .products-header {
+    margin-bottom: 46px;
+}
+
+.products-section .products-subtitle {
+    font-family: var(--font-primary);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26.01px;
+    color: rgba(26, 27, 34, 0.8);
+    max-width: 617px;
+}
+
+/* Баннер поставки */
+.shipping-banner {
+    background: var(--color-dark-green);
+    border-radius: var(--radius-sm);
+    padding: 52px 74px 51px 55px;
+    margin-top: 40px;
+}
+
+.shipping-banner .banner-icon {
+    width: 94px;
+    height: 94px;
+    background: var(--color-white);
+    border-radius: var(--radius-full);
+}
+
+.shipping-banner .banner-title {
+    font-family: var(--font-primary);
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 39.61px;
+    color: var(--color-white);
+}
+
+.shipping-banner .banner-text {
+    font-family: var(--font-primary);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26.01px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* ----- СЕКЦИЯ "О КОМПАНИИ" ----- */
+.about-section {
+    background: var(--color-bg-light);
+    padding: 71px 0 266px;
+    margin-top: 80px;
+}
+
+.about-section .about-number {
+    font-family: var(--font-primary);
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 63.37px;
+    color: var(--color-text);
+}
+
+.about-section .about-text {
+    font-family: var(--font-primary);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26.01px;
+    color: var(--color-text);
+    max-width: 616px;
+}
+
+.about-section .about-link {
+    font-family: var(--font-primary);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 23.76px;
+    color: var(--color-accent-light);
+}
+
+.about-section .about-link::after {
+    content: '→';
+    margin-left: 8px;
+}
+
+.about-section .advantage-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.about-section .advantage-item .advantage-icon {
+    padding: 18px;
+    background: #FEFEFE;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 76px;
+    min-height: 76px;
+}
+
+.about-section .advantage-item .advantage-text {
+    font-family: var(--font-primary);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 27.27px;
+    color: rgba(26, 27, 34, 0.6);
+}
+
+/* ----- СЕКЦИЯ "ОФОРМИТЬ ЗАЯВКУ" ----- */
+.request-section {
+    padding: 80px 0 60px;
+}
+
+.request-section .request-title {
+    font-family: var(--font-primary);
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 63.37px;
+    color: var(--color-text);
+    margin-bottom: 52px;
+}
+
+.request-section .request-description {
+    font-family: var(--font-primary);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26.01px;
+    color: var(--color-text);
+}
+
+.request-section .checkbox-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.request-section .checkbox-wrapper .checkbox-box {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    background: var(--color-input-bg);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: var(--transition-default);
+}
+
+.request-section .checkbox-wrapper .checkbox-box.active {
+    background: var(--color-accent-light);
+}
+
+.request-section .checkbox-wrapper .checkbox-label {
+    font-family: var(--font-primary);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24.24px;
+    color: var(--color-text);
+}
+
+/* ============================================
+   МЕДИА-ЗАПРОСЫ ДЛЯ ГЛАВНОЙ
+   ============================================ */
+@media (max-width: 1400px) {
+    .hero-section .hero-image {
+        right: 20px;
+        width: 700px;
+        height: 404px;
+    }
+
+    .hero-section .hero-outline {
+        display: none;
+    }
+
+    .hero-section .hero-label {
+        right: 40px;
+        top: 150px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .hero-section .hero-image {
+        position: relative;
+        right: auto;
+        top: auto;
+        width: 100%;
+        height: auto;
+        margin-top: 30px;
+    }
+
+    .hero-section .hero-blur {
+        display: none;
+    }
+
+    .hero-section .hero-bg-shape {
+        display: none;
+    }
+
+    .hero-section .hero-outline {
+        display: none;
+    }
+
+    .hero-section .hero-label {
+        position: relative;
+        right: auto;
+        top: auto;
+        text-align: left;
+        margin-top: 20px;
+    }
+
+    .shipping-banner {
+        padding: 30px 20px;
+    }
+
+    .about-section {
+        padding: 40px 0 60px;
+    }
+}
+
+@media (max-width: 992px) {
+    .products-section .products-header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .request-section .request-title {
+        font-size: 32px;
+        line-height: 42px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section .hero-title {
+        font-size: 32px;
+        line-height: 42px;
+    }
+
+    .hero-section .hero-description {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .shipping-banner .banner-title {
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    .about-section .about-number {
+        font-size: 32px;
+        line-height: 42px;
+    }
+
+    .request-section .request-description {
+        font-size: 16px;
+    }
+}
