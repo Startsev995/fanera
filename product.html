@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Берёзовая фанера — Жешартский фанерный комбинат</title>
+
+    <!-- ===== Schema.org ===== -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Березовая фанера",
+        "description": "Березовая фанера — высококачественный конструкционный материал, изготавливаемый из березового шпона.",
+        "image": "https://placehold.co/705x408",
+        "brand": {
+            "@type": "Brand",
+            "name": "Жешартский фанерный комбинат"
+        },
+        "manufacturer": {
+            "@type": "Organization",
+            "name": "Жешартский фанерный комбинат"
+        },
+        "offers": {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStock",
+            "priceCurrency": "RUB"
+        },
+        "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Главная",
+                    "item": "https://example.com/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Каталог возможностей",
+                    "item": "https://example.com/catalog.html"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "Берёзовая фанера",
+                    "item": "https://example.com/product.html"
+                }
+            ]
+        }
+    }
+    </script>
+
+    <!-- ===== Bootstrap 4 ===== -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- ===== Swiper ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css">
+
+    <!-- ===== Общие стили ===== -->
+    <link rel="stylesheet" href="css/common.css">
+
+    <!-- ===== Стили "Продукция" ===== -->
+    <link rel="stylesheet" href="css/product.css">
+</head>
+<body>
+
+    <!-- ========================================
+         MICRODATA: ОРГАНИЗАЦИЯ
+    ======================================== -->
+    <div itemscope itemtype="https://schema.org/Organization">
+        <meta itemprop="name" content="Жешартский фанерный комбинат">
+        <meta itemprop="url" content="https://example.com">
+        <meta itemprop="telephone" content="+7-912-140-10-08">
+        <meta itemprop="address" content="169045, Россия, Республика Коми, п. Жешарт, ул. Гагарина, д. 1">
+        <meta itemprop="foundingDate" content="1946">
+    </div>
+
+    <!-- ========================================
+         СТРАНИЦА С MICRODATA
+    ======================================== -->
+    <div itemscope itemtype="https://schema.org/Product">
+
+        <!-- ========== ШАПКА (новая) ========== -->
+        <header style="background: #1A1B22; padding: 20px 0;">
+            <div class="container-custom">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <nav>
+                            <ul class="nav" style="gap: 30px;">
+                                <li class="nav-item">
+                                    <a href="about.html" style="color: rgba(255,255,255,0.6); font-size:20px; font-weight:500; transition: all 0.3s;">О компании</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="catalog.html" style="color: #6F9B4C; font-size:20px; font-weight:500;">Каталог возможностей</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="press.html" style="color: rgba(255,255,255,0.6); font-size:20px; font-weight:500;">Пресс-служба</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="contacts.html" style="color: rgba(255,255,255,0.6); font-size:20px; font-weight:500;">Контакты</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-lg-4 text-lg-right mt-3 mt-lg-0">
+                        <div style="color: white; font-size:24px; font-weight:700; line-height:31.69px;">8 82134 4-71-20</div>
+                        <div style="opacity:0.5; color: white; font-size:20px; font-weight:500; line-height:25.6px;">Республика Коми, г. Жешарт, ул. Мира</div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- ========== ХЛЕБНЫЕ КРОШКИ ========== -->
+        <div class="product-breadcrumbs" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <div class="container-custom">
+                <nav aria-label="Хлебные крошки">
+                    <ol class="breadcrumb-custom">
+                        <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                            <a href="index.html" itemprop="item">
+                                <span itemprop="name">Главная</span>
+                            </a>
+                            <meta itemprop="position" content="1">
+                        </li>
+                        <span class="breadcrumb-separator">/</span>
+                        <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                            <a href="catalog.html" itemprop="item">
+                                <span itemprop="name">Каталог возможностей</span>
+                            </a>
+                            <meta itemprop="position" content="2">
+                        </li>
+                        <span class="breadcrumb-separator">/</span>
+                        <li class="breadcrumb-item active" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                            <span itemprop="name">Берёзовая фанера</span>
+                            <meta itemprop="position" content="3">
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <!-- ========== ОСНОВНАЯ ИНФОРМАЦИЯ ========== -->
+        <section class="product-main">
+            <div class="container-custom">
+                <div class="row">
+                    <!-- Левая колонка: изображение -->
+                    <div class="col-lg-6">
+                        <div class="product-image">
+                            <img src="https://placehold.co/705x408/104422/FFFFFF?text=Березовая+фанера" alt="Березовая фанера" itemprop="image">
+                        </div>
+                    </div>
+
+                    <!-- Правая колонка: информация -->
+                    <div class="col-lg-6">
+                        <div class="product-info">
+                            <h1 class="product-title" itemprop="name">Березовая фанера</h1>
+                            <p class="product-description" itemprop="description">
+                                Березовая фанера — это высококачественный конструкционный материал, изготавливаемый из березового шпона
+                            </p>
+
+                            <!-- Размеры -->
+                            <div class="product-specs">
+                                <div class="spec-label">Размеры, мм.:</div>
+                                <div class="spec-tags">
+                                    <span class="spec-tag">1525х1525</span>
+                                    <span class="spec-tag">1220х2440</span>
+                                    <span class="spec-tag">1250х2500</span>
+                                    <span class="spec-tag">1525х3050</span>
+                                </div>
+                            </div>
+
+                            <!-- Толщина -->
+                            <div class="product-specs">
+                                <div class="spec-label">Толщина, мм.</div>
+                                <div class="spec-tags">
+                                    <span class="spec-tag">3</span>
+                                    <span class="spec-tag">6</span>
+                                    <span class="spec-tag">9</span>
+                                    <span class="spec-tag">12</span>
+                                    <span class="spec-tag">15</span>
+                                    <span class="spec-tag">18</span>
+                                    <span class="spec-tag">21</span>
+                                    <span class="spec-tag">24</span>
+                                    <span class="spec-tag">27</span>
+                                    <span class="spec-tag">30</span>
+                                    <span class="spec-tag">40</span>
+                                </div>
+                            </div>
+
+                            <!-- Цвета -->
+                            <div class="product-colors">
+                                <div class="colors-label">Цвет:</div>
+                                <div class="colors-grid">
+                                    <div class="color-item">
+                                        <img src="https://placehold.co/80x80/D4A574/FFFFFF?text=Цвет1" alt="Цвет 1">
+                                    </div>
+                                    <div class="color-item">
+                                        <img src="https://placehold.co/80x80/C4956A/FFFFFF?text=Цвет2" alt="Цвет 2">
+                                    </div>
+                                    <div class="color-item">
+                                        <img src="https://placehold.co/80x80/B48660/FFFFFF?text=Цвет3" alt="Цвет 3">
+                                    </div>
+                                    <div class="color-item">
+                                        <img src="https://placehold.co/80x80/A47756/FFFFFF?text=Цвет4" alt="Цвет 4">
+                                    </div>
+                                    <div class="color-item">
+                                        <img src="https://placehold.co/80x80/94684C/FFFFFF?text=Цвет5" alt="Цвет 5">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Кнопки -->
+                            <div class="product-actions">
+                                <button class="btn-order">Оформить заказ</button>
+                                <button class="btn-catalog">Скачать каталог</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== ВКЛАДКИ ========== -->
+        <section class="product-tabs">
+            <div class="container-custom">
+                <!-- Вкладка 1: Описание -->
+                <div class="tab-item active">
+                    <div class="tab-header">
+                        <span class="tab-name">Описание</span>
+                        <div class="tab-toggle">
+                            <span class="line-h"></span>
+                            <span class="line-v"></span>
+                        </div>
+                    </div>
+                    <div class="tab-body">
+                        <div class="tab-text">
+                            Березовая фанера UPG — это высококачественный конструкционный материал, изготавливаемый из березового шпона толщиной 1,5 мм, а также 1,15 и 1,9 мм для специальных продуктов.<br><br>
+                            Он обладает высокой прочностью и долговечностью, хорошо поддается обработке и прекрасно сочетается с отделочными материалами. Сохраняет свойства в широком диапазоне температур: от −40 до +50° С.<br><br>
+                            Мы выпускаем фанеру двух марок — ФК и ФСФ. При производстве фанеры ФК используется карбамидоформальдегидный клей, при производстве фанеры ФСФ — фенолформальдегидный. Торцы фанеры ФК светлее, чем торцы фанеры ФСФ.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Вкладка 2: Характеристики -->
+                <div class="tab-item">
+                    <div class="tab-header">
+                        <span class="tab-name">Характеристики</span>
+                        <div class="tab-toggle">
+                            <span class="line-h"></span>
+                            <span class="line-v"></span>
+                        </div>
+                    </div>
+                    <div class="tab-body">
+                        <div class="tab-text">
+                            <strong>Марки:</strong> ФК, ФСФ<br>
+                            <strong>Толщина:</strong> 3-40 мм<br>
+                            <strong>Размеры:</strong> 1525х1525, 1220х2440, 1250х2500, 1525х3050 мм<br>
+                            <strong>Влажность:</strong> 8-12%<br>
+                            <strong>Плотность:</strong> 650-750 кг/м³<br>
+                            <strong>Прочность на изгиб:</strong> ≥ 60 МПа<br>
+                            <strong>Водостойкость:</strong> (зависит от марки)
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Вкладка 3: Логистика -->
+                <div class="tab-item">
+                    <div class="tab-header">
+                        <span class="tab-name">Логистика</span>
+                        <div class="tab-toggle">
+                            <span class="line-h"></span>
+                            <span class="line-v"></span>
+                        </div>
+                    </div>
+                    <div class="tab-body">
+                        <div class="tab-text">
+                            Мы осуществляем поставки по всей России и за рубеж. Доставка осуществляется автомобильным, железнодорожным и морским транспортом.<br><br>
+                            <strong>Способы отгрузки:</strong><br>
+                            • Самовывоз со склада в п. Жешарт<br>
+                            • Доставка до терминала транспортной компании<br>
+                            • Отгрузка в ж/д вагоны<br>
+                            • Контейнерные перевозки (экспорт)<br><br>
+                            <strong>Упаковка:</strong> Фанера упаковывается в термоусадочную пленку и обвязывается стальной лентой для сохранности при транспортировке.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Вкладка 4: Применение -->
+                <div class="tab-item">
+                    <div class="tab-header">
+                        <span class="tab-name">Применение</span>
+                        <div class="tab-toggle">
+                            <span class="line-h"></span>
+                            <span class="line-v"></span>
+                        </div>
+                    </div>
+                    <div class="tab-body">
+                        <div class="tab-text">
+                            <strong>Строительство:</strong> опалубка, перекрытия, обшивка стен, кровельные работы<br>
+                            <strong>Мебельное производство:</strong> корпусная мебель, фасады, столешницы<br>
+                            <strong>Транспортное машиностроение:</strong> вагоностроение, судостроение, автопром<br>
+                            <strong>Упаковка:</strong> производство тары и упаковки<br>
+                            <strong>Дизайн интерьеров:</strong> декоративные панели, перегородки
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Вкладка 5: Документы -->
+                <div class="tab-item">
+                    <div class="tab-header">
+                        <span class="tab-name">Документы</span>
+                        <div class="tab-toggle">
+                            <span class="line-h"></span>
+                            <span class="line-v"></span>
+                        </div>
+                    </div>
+                    <div class="tab-body">
+                        <div class="tab-text">
+                            <strong>Доступные документы:</strong><br>
+                            • Сертификат соответствия ГОСТ 3916.1-2018<br>
+                            • Паспорт качества<br>
+                            • Экологический сертификат<br>
+                            • Пожарный сертификат<br>
+                            • Протоколы испытаний<br><br>
+                            <span style="opacity:0.6;">Для получения полного пакета документов обратитесь в отдел продаж.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== ОПТОВЫЕ ПОСТАВКИ (ФОРМА) ========== -->
+        <section class="wholesale-section">
+            <div class="container-custom">
+                <h2 class="wholesale-title">Оптовые поставки</h2>
+
+                <form>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <input type="text" class="form-input" placeholder="Имя*" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" class="form-input" placeholder="Контактный телефон*" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-input" placeholder="Адрес электронной почты*" required>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <input type="text" class="form-input" placeholder="Название вашей организации*" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-input" placeholder="Почтовый индекс">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-input" placeholder="Почтовый индекс">
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <textarea class="form-textarea" placeholder="Название вашей организации*" required></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row align-items-start mt-3">
+                        <div class="col-lg-7">
+                            <p style="font-family: var(--font-primary); font-size:18px; font-weight:500; line-height:26.01px; color: var(--color-text);">
+                                Вы можете отправить заявку на товар прямо с нашего сайта. Как только наш менеджер прочтет ее, к Вам на e-mail немедленно придет уведомительное сообщение.
+                            </p>
+                        </div>
+                        <div class="col-lg-5 mt-3 mt-lg-0">
+                            <div class="d-flex flex-wrap align-items-start gap-3">
+                                <div class="checkbox-wrapper">
+                                    <div class="checkbox-box active"></
