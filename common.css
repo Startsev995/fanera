@@ -1,0 +1,527 @@
+/* ============================================
+   ПОДКЛЮЧЕНИЕ ШРИФТОВ GOOGLE FONTS
+   ============================================ */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=PT+Sans+Caption:wght@400;700&display=swap');
+
+/* ============================================
+   CSS ПЕРЕМЕННЫЕ (Цвета, шрифты, отступы)
+   ============================================ */
+:root {
+    /* Основные цвета */
+    --color-primary: #104422;
+    --color-secondary: #657932;
+    --color-dark: #0A2716;
+    --color-dark-green: #0F311D;
+    --color-accent: #327D37;
+    --color-accent-light: #51842A;
+    --color-text: #1A1B22;
+    --color-white: #FFFFFF;
+    --color-bg-light: #F2F2F1;
+    --color-bg-card: #F2EFEA;
+    --color-input-bg: #F2F2F7;
+
+    /* Шрифты */
+    --font-primary: 'Inter', sans-serif;
+    --font-secondary: 'PT Sans Caption', sans-serif;
+
+    /* Размеры */
+    --container-width: 1440px;
+    --header-height: 98px;
+
+    /* Тени и скругления */
+    --radius-sm: 8px;
+    --radius-full: 9999px;
+
+    /* Transitions */
+    --transition-default: all 0.3s ease;
+}
+
+/* ============================================
+   ГЛОБАЛЬНЫЕ СБРОСЫ И БАЗОВЫЕ СТИЛИ
+   ============================================ */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-primary);
+    color: var(--color-text);
+    background: var(--color-white);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition-default);
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* ============================================
+   ОБЩИЕ КОМПОНЕНТЫ
+   ============================================ */
+
+/* Контейнер */
+.container-custom {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Кнопки */
+.btn-primary-custom {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 24px;
+    background: var(--color-white);
+    border-radius: var(--radius-sm);
+    font-family: var(--font-primary);
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 31.69px;
+    color: var(--color-text);
+    border: none;
+    cursor: pointer;
+    transition: var(--transition-default);
+}
+
+.btn-primary-custom:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.btn-outline-white {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 24px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--color-white);
+    font-family: var(--font-primary);
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 31.69px;
+    color: var(--color-white);
+    background: transparent;
+    cursor: pointer;
+    transition: var(--transition-default);
+}
+
+.btn-outline-white:hover {
+    background: var(--color-white);
+    color: var(--color-text);
+}
+
+.btn-outline-dark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 24px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--color-text);
+    font-family: var(--font-primary);
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 31.69px;
+    color: var(--color-text);
+    background: transparent;
+    cursor: pointer;
+    transition: var(--transition-default);
+}
+
+.btn-outline-dark:hover {
+    background: var(--color-text);
+    color: var(--color-white);
+}
+
+.btn-green {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 24px;
+    background: var(--color-accent);
+    border-radius: 7px;
+    font-family: var(--font-primary);
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 31.69px;
+    color: var(--color-white);
+    border: none;
+    cursor: pointer;
+    transition: var(--transition-default);
+}
+
+.btn-green:hover {
+    background: #2a6b2f;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(50, 125, 55, 0.3);
+}
+
+/* Секционные заголовки */
+.section-title {
+    font-family: var(--font-primary);
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 63.37px;
+    color: var(--color-text);
+}
+
+/* Карточки */
+.card-product {
+    background: var(--color-bg-card);
+    border-radius: var(--radius-sm);
+    padding: 12px;
+    transition: var(--transition-default);
+    height: 100%;
+}
+
+.card-product:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.card-product .card-image {
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    margin-bottom: 12px;
+}
+
+.card-product .card-image img {
+    width: 100%;
+    height: 181px;
+    object-fit: cover;
+}
+
+.card-product .card-body {
+    padding: 10px;
+}
+
+.card-product .card-title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 26.4px;
+    color: var(--color-text);
+    margin-bottom: 4px;
+}
+
+.card-product .card-subtitle {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18.48px;
+    color: rgba(26, 27, 34, 0.6);
+}
+
+/* ============================================
+   ФОРМЫ
+   ============================================ */
+.form-input {
+    width: 100%;
+    height: 56px;
+    padding: 17px 16px;
+    background: var(--color-input-bg);
+    border: none;
+    border-radius: var(--radius-sm);
+    font-family: var(--font-primary);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21.12px;
+    color: var(--color-text);
+    transition: var(--transition-default);
+}
+
+.form-input:focus {
+    outline: 2px solid var(--color-accent-light);
+    background: #ffffff;
+}
+
+.form-input::placeholder {
+    color: var(--color-text);
+    opacity: 0.6;
+}
+
+.form-textarea {
+    width: 100%;
+    min-height: 216px;
+    padding: 17px 16px;
+    background: var(--color-input-bg);
+    border: none;
+    border-radius: var(--radius-sm);
+    font-family: var(--font-primary);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21.12px;
+    color: var(--color-text);
+    resize: vertical;
+    transition: var(--transition-default);
+}
+
+.form-textarea:focus {
+    outline: 2px solid var(--color-accent-light);
+    background: #ffffff;
+}
+
+.form-textarea::placeholder {
+    color: var(--color-text);
+    opacity: 0.6;
+}
+
+/* ============================================
+   НАВИГАЦИЯ
+   ============================================ */
+.navbar-custom {
+    padding: 36px 0 0;
+    background: transparent;
+    position: relative;
+    z-index: 10;
+}
+
+.navbar-custom .nav-link {
+    font-family: var(--font-primary);
+    font-size: 20px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.5);
+    padding: 0;
+    transition: var(--transition-default);
+}
+
+.navbar-custom .nav-link:hover {
+    color: var(--color-white);
+    opacity: 1;
+}
+
+.navbar-custom .nav-link.active {
+    color: var(--color-white);
+    opacity: 1;
+}
+
+/* Логотип */
+.logo-wrapper {
+    position: relative;
+    width: 187.49px;
+    height: 98.34px;
+}
+
+.logo-wrapper .logo-square {
+    position: absolute;
+    width: 84.19px;
+    height: 84.19px;
+    background: #FDFFE9;
+    border: 1.89px solid #86755E;
+}
+
+.logo-wrapper .logo-square:nth-child(1) {
+    left: 32.81px;
+    top: 7px;
+}
+
+.logo-wrapper .logo-square:nth-child(2) {
+    left: 31.17px;
+    top: 7px;
+}
+
+.logo-wrapper .logo-square:nth-child(3) {
+    left: 1.64px;
+    top: 7px;
+}
+
+.logo-wrapper .logo-square:nth-child(4) {
+    left: 0px;
+    top: 7px;
+}
+
+.logo-wrapper .logo-text {
+    position: absolute;
+    width: 73.48px;
+    height: 35.57px;
+    left: 5.36px;
+    top: 31.31px;
+    background: #005844;
+}
+
+/* ============================================
+   ФУТЕР
+   ============================================ */
+.footer-custom {
+    background: var(--color-dark);
+    padding: 32px 24px;
+}
+
+.footer-custom .footer-title {
+    color: var(--color-white);
+    font-family: var(--font-secondary);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 20px;
+    margin-bottom: 16px;
+}
+
+.footer-custom .footer-link {
+    color: rgba(244, 241, 241, 0.8);
+    font-family: var(--font-secondary);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    transition: var(--transition-default);
+    display: block;
+    margin-bottom: 12px;
+}
+
+.footer-custom .footer-link:hover {
+    color: var(--color-white);
+}
+
+.footer-custom .footer-phone {
+    color: #F4F1F1;
+    font-family: var(--font-secondary);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 20px;
+}
+
+.footer-custom .footer-email {
+    color: var(--color-white);
+    font-family: var(--font-secondary);
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: underline;
+    line-height: 20px;
+}
+
+.footer-custom .footer-address {
+    color: #F4F1F1;
+    font-family: var(--font-secondary);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.footer-custom .footer-divider {
+    border-top: 1px solid rgba(135, 109, 79, 0.3);
+    padding-top: 24px;
+    margin-top: 24px;
+}
+
+.footer-custom .footer-copy {
+    color: var(--color-white);
+    font-family: var(--font-secondary);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+/* ============================================
+   SWIPER (общие стили)
+   ============================================ */
+.swiper-container {
+    width: 100%;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+}
+
+.swiper-pagination-bullet {
+    background: var(--color-white);
+    opacity: 0.4;
+    width: 40px;
+    height: 4px;
+    border-radius: 0;
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--color-white);
+    opacity: 1;
+}
+
+/* ============================================
+   МЕДИА-ЗАПРОСЫ
+   ============================================ */
+@media (max-width: 1200px) {
+    .container-custom {
+        padding: 0 40px;
+    }
+
+    .section-title {
+        font-size: 36px;
+        line-height: 48px;
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar-custom .nav-link {
+        color: var(--color-text);
+        padding: 8px 0;
+    }
+
+    .navbar-custom .nav-link:hover {
+        color: var(--color-primary);
+    }
+
+    .navbar-custom .nav-link.active {
+        color: var(--color-primary);
+    }
+
+    .logo-wrapper {
+        width: 120px;
+        height: 70px;
+    }
+
+    .logo-wrapper .logo-square {
+        width: 60px;
+        height: 60px;
+    }
+
+    .logo-wrapper .logo-text {
+        width: 50px;
+        height: 25px;
+        left: 4px;
+        top: 22px;
+    }
+
+    .btn-primary-custom,
+    .btn-outline-white,
+    .btn-outline-dark {
+        font-size: 18px;
+        padding: 14px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container-custom {
+        padding: 0 16px;
+    }
+
+    .section-title {
+        font-size: 28px;
+        line-height: 38px;
+    }
+
+    .btn-green {
+        font-size: 18px;
+        padding: 12px 20px;
+        width: 100%;
+    }
+}
