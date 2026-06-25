@@ -1,0 +1,538 @@
+/* ============================================
+   СТРАНИЦА "ПРОДУКЦИЯ" (ДЕТАЛЬНАЯ КАРТОЧКА)
+   ============================================ */
+
+/* Хлебные крошки */
+.product-breadcrumbs {
+    padding-top: 28px;
+    padding-bottom: 28px;
+}
+
+/* Основная секция */
+.product-main {
+    padding-bottom: 40px;
+}
+
+/* Изображение товара */
+.product-image {
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    width: 100%;
+    max-width: 705px;
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Информация о товаре */
+.product-info {
+    padding-left: 30px;
+}
+
+.product-info .product-title {
+    font-family: var(--font-primary);
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 63.37px;
+    color: var(--color-text);
+    margin-bottom: 16px;
+}
+
+.product-info .product-description {
+    font-family: var(--font-primary);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26.01px;
+    color: var(--color-text);
+    margin-bottom: 24px;
+    max-width: 599px;
+}
+
+/* Характеристики */
+.product-specs {
+    margin-bottom: 24px;
+}
+
+.product-specs .spec-label {
+    font-family: var(--font-primary);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26.01px;
+    color: var(--color-text);
+    margin-bottom: 12px;
+}
+
+.product-specs .spec-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.product-specs .spec-tag {
+    padding: 10px 16px;
+    border: 1px solid var(--color-text);
+    border-radius: var(--radius-sm);
+    font-family: var(--font-primary);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26.01px;
+    color: var(--color-text);
+}
+
+/* Цвета */
+.product-colors {
+    margin-bottom: 24px;
+}
+
+.product-colors .colors-label {
+    font-family: var(--font-primary);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26.01px;
+    color: var(--color-text);
+    margin-bottom: 12px;
+}
+
+.product-colors .colors-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.product-colors .color-item {
+    width: 80px;
+    height: 80px;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    cursor: pointer;
+    transition: var(--transition-default);
+}
+
+.product-colors .color-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.product-colors .color-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Кнопки действий */
+.product-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+}
+
+.product-actions .btn-order {
+    padding: 16px 32px;
+    background: var(--color-accent);
+    border-radius: 7px;
+    border: none;
+    font-family: var(--font-primary);
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 22.44px;
+    color: var(--color-white);
+    cursor: pointer;
+    transition: var(--transition-default);
+    min-width: 288px;
+}
+
+.product-actions .btn-order:hover {
+    background: #2a6b2f;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(50, 125, 55, 0.3);
+}
+
+.product-actions .btn-catalog {
+    padding: 16px 32px;
+    border: 1px solid var(--color-text);
+    border-radius: 7px;
+    background: transparent;
+    font-family: var(--font-primary);
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 22.44px;
+    color: var(--color-text);
+    cursor: pointer;
+    transition: var(--transition-default);
+    min-width: 288px;
+}
+
+.product-actions .btn-catalog:hover {
+    background: var(--color-text);
+    color: var(--color-white);
+}
+
+/* --- Боковая колонка --- */
+
+/* Блок "Отдел" */
+.sidebar-department {
+    background: rgba(31, 31, 31, 0.05);
+    border-radius: var(--radius-md);
+    padding: 21px 20px 24px;
+}
+
+.sidebar-department .dept-title {
+    font-family: var(--font-primary);
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 32px;
+    color: rgba(0, 0, 0, 0.2);
+    margin-bottom: 12px;
+}
+
+.sidebar-department .dept-subtitle {
+    font-family: var(--font-primary);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color: rgba(31, 31, 31, 0.8);
+    margin-bottom: 20px;
+    max-width: 310px;
+}
+
+.sidebar-department .contact-label {
+    font-family: var(--font-primary);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    color: rgba(31, 31, 31, 0.8);
+    margin-bottom: 4px;
+}
+
+.sidebar-department .contact-value {
+    font-family: var(--font-primary);
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 28px;
+    color: #1F1F1F;
+    margin-bottom: 16px;
+}
+
+.sidebar-department .contact-value:last-of-type {
+    margin-bottom: 0;
+}
+
+/* Блок "Написать нам" */
+.sidebar-write {
+    background: var(--color-accent);
+    border-radius: var(--radius-md);
+    padding: 21px 18px 24px;
+    margin-top: 24px;
+}
+
+.sidebar-write .write-title {
+    font-family: var(--font-primary);
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 32px;
+    color: var(--color-white);
+    margin-bottom: 8px;
+}
+
+.sidebar-write .write-subtitle {
+    font-family: var(--font-primary);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 18px;
+    max-width: 345px;
+}
+
+.sidebar-write .write-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 24px;
+    background: var(--color-white);
+    border-radius: 7px;
+    font-family: var(--font-primary);
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 22.44px;
+    color: var(--color-accent);
+    border: none;
+    cursor: pointer;
+    transition: var(--transition-default);
+    width: 100%;
+    max-width: 332px;
+}
+
+.sidebar-write .write-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* --- Вкладки --- */
+.product-tabs {
+    margin-top: 40px;
+}
+
+.product-tabs .tab-item {
+    background: var(--color-gray-light);
+    border-radius: var(--radius-sm);
+    padding: 20px 24px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: var(--transition-default);
+}
+
+.product-tabs .tab-item:hover {
+    transform: translateX(4px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.product-tabs .tab-item:last-child {
+    margin-bottom: 0;
+}
+
+.product-tabs .tab-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-tabs .tab-name {
+    font-family: var(--font-primary);
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 39.61px;
+    color: var(--color-text);
+}
+
+.product-tabs .tab-toggle {
+    width: 39px;
+    height: 40px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.product-tabs .tab-toggle .line-h {
+    position: absolute;
+    width: 39px;
+    height: 0.49px;
+    left: 0.01px;
+    top: 18px;
+    transform: rotate(1deg);
+    outline: 2px solid var(--color-text);
+    outline-offset: -1px;
+    transition: var(--transition-default);
+}
+
+.product-tabs .tab-toggle .line-v {
+    position: absolute;
+    width: 39px;
+    height: 0.49px;
+    left: 19px;
+    top: -0.99px;
+    transform: rotate(91deg);
+    outline: 2px solid var(--color-text);
+    outline-offset: -1px;
+    transition: var(--transition-default);
+}
+
+.product-tabs .tab-item.active .tab-toggle .line-v {
+    opacity: 0;
+}
+
+.product-tabs .tab-body {
+    display: none;
+    padding-top: 20px;
+    border-top: 1px solid rgba(31, 31, 31, 0.1);
+    margin-top: 20px;
+}
+
+.product-tabs .tab-item.active .tab-body {
+    display: block;
+}
+
+.product-tabs .tab-body .tab-text {
+    font-family: var(--font-primary);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    color: var(--color-text);
+}
+
+/* --- Оптовые поставки (форма) --- */
+.wholesale-section {
+    margin-top: 60px;
+}
+
+.wholesale-section .wholesale-title {
+    font-family: var(--font-primary);
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 52.81px;
+    color: var(--color-text);
+    max-width: 619px;
+    margin-bottom: 32px;
+}
+
+/* --- О компании (блок с текстом) --- */
+.about-product-section {
+    margin-top: 60px;
+}
+
+.about-product-section .about-title {
+    font-family: var(--font-primary);
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 52.81px;
+    color: var(--color-text);
+    max-width: 802px;
+    margin-bottom: 32px;
+}
+
+.about-product-section .about-text {
+    font-family: var(--font-primary);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28.08px;
+    color: var(--color-text);
+    max-width: 1440px;
+}
+
+/* ============================================
+   АДАПТИВ
+   ============================================ */
+@media (max-width: 1200px) {
+    .product-info {
+        padding-left: 0;
+        margin-top: 30px;
+    }
+
+    .product-info .product-title {
+        font-size: 36px;
+        line-height: 48px;
+    }
+
+    .wholesale-section .wholesale-title {
+        font-size: 32px;
+        line-height: 42px;
+    }
+
+    .about-product-section .about-title {
+        font-size: 32px;
+        line-height: 42px;
+    }
+}
+
+@media (max-width: 992px) {
+    .product-info .product-title {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .product-info .product-description {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .product-actions .btn-order,
+    .product-actions .btn-catalog {
+        min-width: 100%;
+    }
+
+    .product-tabs .tab-name {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .wholesale-section .wholesale-title {
+        font-size: 28px;
+        line-height: 38px;
+    }
+
+    .about-product-section .about-title {
+        font-size: 28px;
+        line-height: 38px;
+    }
+
+    .about-product-section .about-text {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .sidebar-write .write-btn {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .product-info .product-title {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .product-specs .spec-tag {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+
+    .product-colors .color-item {
+        width: 60px;
+        height: 60px;
+    }
+
+    .product-tabs .tab-item {
+        padding: 16px;
+    }
+
+    .product-tabs .tab-name {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .product-tabs .tab-toggle {
+        width: 30px;
+        height: 30px;
+    }
+
+    .product-tabs .tab-toggle .line-h,
+    .product-tabs .tab-toggle .line-v {
+        width: 30px;
+    }
+
+    .product-tabs .tab-toggle .line-v {
+        left: 14px;
+    }
+
+    .sidebar-department .dept-title {
+        font-size: 22px;
+        line-height: 28px;
+    }
+
+    .sidebar-department .contact-value {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .sidebar-write .write-title {
+        font-size: 22px;
+        line-height: 28px;
+    }
+
+    .wholesale-section .wholesale-title {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .about-product-section .about-title {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .about-product-section .about-text {
+        font-size: 14px;
+        line-height: 22px;
+    }
+}
