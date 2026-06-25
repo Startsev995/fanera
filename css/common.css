@@ -4,10 +4,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=PT+Sans+Caption:wght@400;700&display=swap');
 
 /* ============================================
-   CSS ПЕРЕМЕННЫЕ (Цвета, шрифты, отступы)
+   CSS ПЕРЕМЕННЫЕ
    ============================================ */
 :root {
-    /* Основные цвета */
     --color-primary: #104422;
     --color-secondary: #657932;
     --color-dark: #0A2716;
@@ -19,25 +18,24 @@
     --color-bg-light: #F2F2F1;
     --color-bg-card: #F2EFEA;
     --color-input-bg: #F2F2F7;
+    --color-gray-light: #F5F5F5;
+    --color-gray-text: #757575;
+    --color-dark-header: #1A1B22;
+    --color-dark-nav: #2B2C35;
 
-    /* Шрифты */
     --font-primary: 'Inter', sans-serif;
     --font-secondary: 'PT Sans Caption', sans-serif;
 
-    /* Размеры */
     --container-width: 1440px;
-    --header-height: 98px;
-
-    /* Тени и скругления */
     --radius-sm: 8px;
+    --radius-md: 16px;
     --radius-full: 9999px;
 
-    /* Transitions */
     --transition-default: all 0.3s ease;
 }
 
 /* ============================================
-   ГЛОБАЛЬНЫЕ СБРОСЫ И БАЗОВЫЕ СТИЛИ
+   ГЛОБАЛЬНЫЕ СБРОСЫ
    ============================================ */
 *,
 *::before,
@@ -82,285 +80,253 @@ ul {
 }
 
 /* ============================================
-   ОБЩИЕ КОМПОНЕНТЫ
+   КОНТЕЙНЕР
    ============================================ */
-
-/* Контейнер */
 .container-custom {
     max-width: var(--container-width);
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* Кнопки */
-.btn-primary-custom {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px 24px;
-    background: var(--color-white);
-    border-radius: var(--radius-sm);
-    font-family: var(--font-primary);
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 31.69px;
-    color: var(--color-text);
-    border: none;
-    cursor: pointer;
-    transition: var(--transition-default);
+@media (max-width: 1480px) {
+    .container-custom {
+        padding: 0 40px;
+    }
 }
 
-.btn-primary-custom:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+@media (max-width: 768px) {
+    .container-custom {
+        padding: 0 16px;
+    }
 }
 
-.btn-outline-white {
-    display: inline-flex;
+/* ============================================
+   ХЛЕБНЫЕ КРОШКИ
+   ============================================ */
+.breadcrumb-custom {
+    display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 20px 24px;
-    border-radius: var(--radius-sm);
-    border: 1px solid var(--color-white);
+    gap: 8px;
     font-family: var(--font-primary);
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 31.69px;
-    color: var(--color-white);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.6px;
+    color: var(--color-gray-text);
+    padding: 0;
+    margin: 0;
     background: transparent;
-    cursor: pointer;
-    transition: var(--transition-default);
 }
 
-.btn-outline-white:hover {
-    background: var(--color-white);
+.breadcrumb-custom .breadcrumb-item {
+    color: var(--color-gray-text);
+}
+
+.breadcrumb-custom .breadcrumb-item.active {
     color: var(--color-text);
 }
 
-.btn-outline-dark {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px 24px;
-    border-radius: var(--radius-sm);
-    border: 1px solid var(--color-text);
-    font-family: var(--font-primary);
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 31.69px;
-    color: var(--color-text);
-    background: transparent;
-    cursor: pointer;
-    transition: var(--transition-default);
+.breadcrumb-custom .breadcrumb-separator {
+    color: var(--color-gray-text);
 }
 
-.btn-outline-dark:hover {
-    background: var(--color-text);
-    color: var(--color-white);
-}
-
-.btn-green {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 16px 24px;
-    background: var(--color-accent);
-    border-radius: 7px;
-    font-family: var(--font-primary);
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 31.69px;
-    color: var(--color-white);
-    border: none;
-    cursor: pointer;
-    transition: var(--transition-default);
-}
-
-.btn-green:hover {
-    background: #2a6b2f;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(50, 125, 55, 0.3);
-}
-
-/* Секционные заголовки */
-.section-title {
-    font-family: var(--font-primary);
-    font-size: 48px;
-    font-weight: 700;
-    line-height: 63.37px;
-    color: var(--color-text);
-}
-
-/* Карточки */
-.card-product {
-    background: var(--color-bg-card);
-    border-radius: var(--radius-sm);
-    padding: 12px;
-    transition: var(--transition-default);
+/* ============================================
+   КАРТОЧКИ КАТАЛОГА
+   ============================================ */
+.card-catalog {
+    background: var(--color-gray-light);
+    border-radius: var(--radius-md);
+    padding: 21px 13px 19px;
     height: 100%;
+    transition: var(--transition-default);
+    border: none;
 }
 
-.card-product:hover {
+.card-catalog:hover {
     transform: translateY(-8px);
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
 }
 
-.card-product .card-image {
+.card-catalog .card-image {
     border-radius: var(--radius-sm);
     overflow: hidden;
-    margin-bottom: 12px;
+    margin-bottom: 37px;
 }
 
-.card-product .card-image img {
+.card-catalog .card-image img {
     width: 100%;
-    height: 181px;
+    height: 143px;
     object-fit: cover;
 }
 
-.card-product .card-body {
-    padding: 10px;
-}
-
-.card-product .card-title {
-    font-size: 20px;
+.card-catalog .card-title {
+    font-family: var(--font-primary);
+    font-size: 18px;
     font-weight: 500;
-    line-height: 26.4px;
+    line-height: 23.76px;
     color: var(--color-text);
-    margin-bottom: 4px;
+    margin-bottom: 5px;
 }
 
-.card-product .card-subtitle {
+.card-catalog .card-subtitle {
+    font-family: var(--font-primary);
     font-size: 14px;
     font-weight: 500;
     line-height: 18.48px;
     color: rgba(26, 27, 34, 0.6);
 }
 
-/* ============================================
-   ФОРМЫ
-   ============================================ */
-.form-input {
+.card-catalog .btn-detail {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    height: 56px;
-    padding: 17px 16px;
-    background: var(--color-input-bg);
-    border: none;
+    height: 44px;
+    padding: 0 24px;
     border-radius: var(--radius-sm);
     font-family: var(--font-primary);
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 600;
     line-height: 21.12px;
-    color: var(--color-text);
-    transition: var(--transition-default);
-}
-
-.form-input:focus {
-    outline: 2px solid var(--color-accent-light);
-    background: #ffffff;
-}
-
-.form-input::placeholder {
-    color: var(--color-text);
-    opacity: 0.6;
-}
-
-.form-textarea {
-    width: 100%;
-    min-height: 216px;
-    padding: 17px 16px;
-    background: var(--color-input-bg);
-    border: none;
-    border-radius: var(--radius-sm);
-    font-family: var(--font-primary);
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 21.12px;
-    color: var(--color-text);
-    resize: vertical;
-    transition: var(--transition-default);
-}
-
-.form-textarea:focus {
-    outline: 2px solid var(--color-accent-light);
-    background: #ffffff;
-}
-
-.form-textarea::placeholder {
-    color: var(--color-text);
-    opacity: 0.6;
-}
-
-/* ============================================
-   НАВИГАЦИЯ
-   ============================================ */
-.navbar-custom {
-    padding: 36px 0 0;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    color: rgba(26, 27, 34, 0.6);
     background: transparent;
-    position: relative;
-    z-index: 10;
+    transition: var(--transition-default);
+    cursor: pointer;
 }
 
-.navbar-custom .nav-link {
+.card-catalog .btn-detail:hover {
+    background: var(--color-accent);
+    color: var(--color-white);
+    border-color: var(--color-accent);
+}
+
+.card-catalog .btn-detail.primary {
+    background: var(--color-accent);
+    border: 1px solid var(--color-white);
+    color: var(--color-white);
+}
+
+.card-catalog .btn-detail.primary:hover {
+    background: #2a6b2f;
+    transform: scale(1.02);
+}
+
+/* ============================================
+   ШАПКА (ХЕДЕР)
+   ============================================ */
+.header-custom {
+    background: var(--color-dark-header);
+    padding: 20px 0;
+}
+
+.header-custom .header-phone {
     font-family: var(--font-primary);
     font-size: 20px;
-    font-weight: 500;
-    color: rgba(255, 255, 255, 0.5);
-    padding: 0;
-    transition: var(--transition-default);
-}
-
-.navbar-custom .nav-link:hover {
+    font-weight: 700;
+    line-height: 26.4px;
     color: var(--color-white);
-    opacity: 1;
 }
 
-.navbar-custom .nav-link.active {
-    color: var(--color-white);
-    opacity: 1;
+.header-custom .header-address {
+    font-family: var(--font-secondary);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: rgba(244, 241, 241, 0.5);
 }
 
-/* Логотип */
-.logo-wrapper {
+/* Логотип в шапке */
+.logo-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.logo-header .logo-squares {
+    display: grid;
+    grid-template-columns: repeat(2, 72.68px);
+    grid-template-rows: repeat(2, 72.68px);
+    gap: 0;
     position: relative;
-    width: 187.49px;
-    height: 98.34px;
 }
 
-.logo-wrapper .logo-square {
-    position: absolute;
-    width: 84.19px;
-    height: 84.19px;
+.logo-header .logo-squares .sq {
+    width: 72.68px;
+    height: 72.68px;
     background: #FDFFE9;
     border: 1.89px solid #86755E;
 }
 
-.logo-wrapper .logo-square:nth-child(1) {
-    left: 32.81px;
-    top: 7px;
-}
-
-.logo-wrapper .logo-square:nth-child(2) {
-    left: 31.17px;
-    top: 7px;
-}
-
-.logo-wrapper .logo-square:nth-child(3) {
-    left: 1.64px;
-    top: 7px;
-}
-
-.logo-wrapper .logo-square:nth-child(4) {
-    left: 0px;
-    top: 7px;
-}
-
-.logo-wrapper .logo-text {
+.logo-header .logo-squares .sq-overlay {
     position: absolute;
-    width: 73.48px;
-    height: 35.57px;
-    left: 5.36px;
-    top: 31.31px;
+    width: 63.43px;
+    height: 30.70px;
     background: #005844;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo-header .logo-text {
+    font-family: var(--font-primary);
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 22.05px;
+    color: var(--color-white);
+    margin-left: 10px;
+}
+
+/* Навигация в шапке */
+.nav-catalog {
+    background: var(--color-dark-nav);
+    padding: 0;
+}
+
+.nav-catalog .nav-link-custom {
+    font-family: var(--font-primary);
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.6);
+    padding: 12px 0;
+    transition: var(--transition-default);
+}
+
+.nav-catalog .nav-link-custom:hover {
+    color: var(--color-white);
+    opacity: 1;
+}
+
+.nav-catalog .nav-link-custom.active {
+    color: #6F9B4C;
+}
+
+/* ============================================
+   БАННЕР С ОПИСАНИЕМ КАТАЛОГА
+   ============================================ */
+.catalog-banner {
+    background: var(--color-gray-light);
+    border-radius: var(--radius-md);
+    padding: 53px 41px;
+    margin-top: 40px;
+}
+
+.catalog-banner .banner-title {
+    font-family: var(--font-primary);
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 39.61px;
+    color: var(--color-text);
+    max-width: 802px;
+}
+
+.catalog-banner .banner-text {
+    font-family: var(--font-primary);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28.08px;
+    color: var(--color-text);
+    max-width: 1114px;
+    margin-top: 18px;
 }
 
 /* ============================================
@@ -368,7 +334,7 @@ ul {
    ============================================ */
 .footer-custom {
     background: var(--color-dark);
-    padding: 32px 24px;
+    padding: 32px 0;
 }
 
 .footer-custom .footer-title {
@@ -408,7 +374,6 @@ ul {
     font-family: var(--font-secondary);
     font-size: 14px;
     font-weight: 400;
-    text-decoration: underline;
     line-height: 20px;
 }
 
@@ -423,7 +388,7 @@ ul {
 .footer-custom .footer-divider {
     border-top: 1px solid rgba(135, 109, 79, 0.3);
     padding-top: 24px;
-    margin-top: 24px;
+    margin-top: 23px;
 }
 
 .footer-custom .footer-copy {
@@ -434,94 +399,73 @@ ul {
     line-height: 16px;
 }
 
-/* ============================================
-   SWIPER (общие стили)
-   ============================================ */
-.swiper-container {
-    width: 100%;
-    border-radius: var(--radius-sm);
-    overflow: hidden;
-}
-
-.swiper-pagination-bullet {
+.footer-custom .social-icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
     background: var(--color-white);
-    opacity: 0.4;
-    width: 40px;
-    height: 4px;
-    border-radius: 0;
-}
-
-.swiper-pagination-bullet-active {
-    background: var(--color-white);
-    opacity: 1;
+    margin: 0 2px;
 }
 
 /* ============================================
    МЕДИА-ЗАПРОСЫ
    ============================================ */
 @media (max-width: 1200px) {
-    .container-custom {
-        padding: 0 40px;
+    .catalog-banner .banner-title {
+        font-size: 24px;
+        line-height: 32px;
     }
 
-    .section-title {
-        font-size: 36px;
-        line-height: 48px;
+    .catalog-banner .banner-text {
+        font-size: 16px;
+        line-height: 24px;
     }
 }
 
 @media (max-width: 992px) {
-    .navbar-custom .nav-link {
-        color: var(--color-text);
-        padding: 8px 0;
+    .header-custom .header-phone {
+        font-size: 16px;
     }
 
-    .navbar-custom .nav-link:hover {
-        color: var(--color-primary);
+    .logo-header .logo-text {
+        font-size: 16px;
     }
 
-    .navbar-custom .nav-link.active {
-        color: var(--color-primary);
+    .card-catalog {
+        padding: 16px 10px;
     }
 
-    .logo-wrapper {
-        width: 120px;
-        height: 70px;
-    }
-
-    .logo-wrapper .logo-square {
-        width: 60px;
-        height: 60px;
-    }
-
-    .logo-wrapper .logo-text {
-        width: 50px;
-        height: 25px;
-        left: 4px;
-        top: 22px;
-    }
-
-    .btn-primary-custom,
-    .btn-outline-white,
-    .btn-outline-dark {
-        font-size: 18px;
-        padding: 14px 20px;
+    .card-catalog .card-image img {
+        height: 120px;
     }
 }
 
 @media (max-width: 768px) {
-    .container-custom {
-        padding: 0 16px;
+    .catalog-banner {
+        padding: 30px 20px;
     }
 
-    .section-title {
-        font-size: 28px;
-        line-height: 38px;
+    .catalog-banner .banner-title {
+        font-size: 20px;
+        line-height: 28px;
     }
 
-    .btn-green {
-        font-size: 18px;
-        padding: 12px 20px;
-        width: 100%;
+    .catalog-banner .banner-text {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .breadcrumb-custom {
+        font-size: 12px;
+    }
+
+    .card-catalog .card-title {
+        font-size: 16px;
+    }
+
+    .footer-custom .footer-divider {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
     }
 }
