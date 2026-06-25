@@ -1,0 +1,342 @@
+/* ============================================
+   СТРАНИЦА "КОНТАКТЫ"
+   ============================================ */
+
+/* Хлебные крошки */
+.contacts-breadcrumbs {
+    padding-top: 28px;
+    padding-bottom: 28px;
+}
+
+/* Заголовок страницы */
+.contacts-header {
+    padding: 10px 0 30px;
+}
+
+.contacts-header .page-title {
+    font-family: var(--font-primary);
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 52.81px;
+    color: var(--color-text);
+    max-width: 649px;
+}
+
+/* Основная контактная информация */
+.contacts-main {
+    padding-bottom: 40px;
+}
+
+.contacts-card {
+    background: rgba(31, 31, 31, 0.05);
+    border-radius: var(--radius-md);
+    padding: 28px 20px 24px;
+    height: 100%;
+}
+
+.contacts-card .card-title {
+    font-family: var(--font-primary);
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 32px;
+    color: rgba(0, 0, 0, 0.2);
+    margin-bottom: 28px;
+}
+
+.contacts-card .contact-label {
+    font-family: var(--font-primary);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    color: rgba(31, 31, 31, 0.8);
+    margin-bottom: 4px;
+}
+
+.contacts-card .contact-value {
+    font-family: var(--font-primary);
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 28px;
+    color: #1F1F1F;
+    margin-bottom: 18px;
+}
+
+.contacts-card .contact-value:last-of-type {
+    margin-bottom: 0;
+}
+
+.contacts-card .contact-value.address {
+    font-size: 17px;
+    line-height: 28px;
+}
+
+/* Карта (заглушка) */
+.contacts-map {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    height: 100%;
+    min-height: 294px;
+}
+
+.contacts-map img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Блок "Написать нам" */
+.contacts-write {
+    background: var(--color-accent);
+    border-radius: 20px;
+    padding: 21px 24px 24px;
+    height: 100%;
+    min-height: 218px;
+}
+
+.contacts-write .write-title {
+    font-family: var(--font-primary);
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 32px;
+    color: var(--color-white);
+    margin-bottom: 8px;
+}
+
+.contacts-write .write-subtitle {
+    font-family: var(--font-primary);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 20px;
+    max-width: 345px;
+}
+
+.contacts-write .write-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 24px;
+    background: var(--color-white);
+    border-radius: 7px;
+    font-family: var(--font-primary);
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 22.44px;
+    color: var(--color-accent);
+    border: none;
+    cursor: pointer;
+    transition: var(--transition-default);
+    width: 100%;
+    max-width: 507px;
+}
+
+.contacts-write .write-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Список отделов */
+.departments-list {
+    margin-top: 40px;
+}
+
+.departments-list .department-item {
+    background: var(--color-gray-light);
+    border-radius: var(--radius-md);
+    padding: 26px 26px 30px 24px;
+    margin-bottom: 12px;
+    transition: var(--transition-default);
+    cursor: pointer;
+}
+
+.departments-list .department-item:hover {
+    transform: translateX(4px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.departments-list .department-item:last-child {
+    margin-bottom: 0;
+}
+
+.departments-list .department-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.departments-list .department-name {
+    font-family: var(--font-primary);
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 34.33px;
+    color: var(--color-text);
+}
+
+.departments-list .department-toggle {
+    width: 39px;
+    height: 40px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.departments-list .department-toggle .line-h {
+    position: absolute;
+    width: 39px;
+    height: 0.49px;
+    left: 0.01px;
+    top: 18px;
+    transform: rotate(1deg);
+    outline: 2px solid var(--color-text);
+    outline-offset: -1px;
+    transition: var(--transition-default);
+}
+
+.departments-list .department-toggle .line-v {
+    position: absolute;
+    width: 39px;
+    height: 0.49px;
+    left: 19px;
+    top: -0.99px;
+    transform: rotate(91deg);
+    outline: 2px solid var(--color-text);
+    outline-offset: -1px;
+    transition: var(--transition-default);
+}
+
+.departments-list .department-item.active .department-toggle .line-v {
+    opacity: 0;
+}
+
+.departments-list .department-body {
+    display: none;
+    padding-top: 20px;
+    border-top: 1px solid rgba(31, 31, 31, 0.1);
+    margin-top: 20px;
+}
+
+.departments-list .department-item.active .department-body {
+    display: block;
+}
+
+.departments-list .department-body .contact-label {
+    font-family: var(--font-primary);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    color: rgba(31, 31, 31, 0.8);
+    margin-bottom: 4px;
+}
+
+.departments-list .department-body .contact-value {
+    font-family: var(--font-primary);
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 28px;
+    color: #1F1F1F;
+    margin-bottom: 16px;
+}
+
+.departments-list .department-body .contact-value:last-of-type {
+    margin-bottom: 0;
+}
+
+/* ============================================
+   АДАПТИВ
+   ============================================ */
+@media (max-width: 1200px) {
+    .contacts-header .page-title {
+        font-size: 32px;
+        line-height: 42px;
+    }
+}
+
+@media (max-width: 992px) {
+    .contacts-header .page-title {
+        font-size: 28px;
+        line-height: 38px;
+    }
+
+    .contacts-card {
+        margin-bottom: 20px;
+    }
+
+    .contacts-map {
+        min-height: 200px;
+    }
+
+    .contacts-write {
+        min-height: auto;
+        margin-top: 20px;
+    }
+
+    .contacts-write .write-btn {
+        max-width: 100%;
+    }
+
+    .departments-list .department-name {
+        font-size: 22px;
+        line-height: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contacts-header .page-title {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .contacts-card .card-title {
+        font-size: 22px;
+        line-height: 28px;
+    }
+
+    .contacts-card .contact-value {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .contacts-card .contact-value.address {
+        font-size: 15px;
+        line-height: 24px;
+    }
+
+    .contacts-write .write-title {
+        font-size: 22px;
+        line-height: 28px;
+    }
+
+    .contacts-write .write-subtitle {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .departments-list .department-item {
+        padding: 20px 16px;
+    }
+
+    .departments-list .department-name {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .departments-list .department-toggle {
+        width: 30px;
+        height: 30px;
+    }
+
+    .departments-list .department-toggle .line-h,
+    .departments-list .department-toggle .line-v {
+        width: 30px;
+    }
+
+    .departments-list .department-toggle .line-v {
+        left: 14px;
+    }
+
+    .departments-list .department-body .contact-value {
+        font-size: 18px;
+        line-height: 24px;
+    }
+}
