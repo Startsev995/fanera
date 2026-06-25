@@ -4,28 +4,27 @@
 
 $(document).ready(function() {
 
-    // ========== SWIPER ==========
-    if ($('.swiper-container').length > 0) {
-        var swiper = new Swiper('.swiper-container', {
+    // ========== ИНИЦИАЛИЗАЦИЯ СЛАЙДЕРА ==========
+    if ($('.about-swiper').length > 0) {
+        var aboutSwiper = new Swiper('.about-swiper', {
             loop: true,
             autoplay: {
                 delay: 4000,
                 disableOnInteraction: false,
             },
             pagination: {
-                el: '.swiper-pagination',
+                el: '.about-pagination',
                 clickable: true,
-                renderBullet: function(index, className) {
-                    return '<span class="' + className + '"></span>';
-                }
             },
-            slidesPerView: 1,
-            spaceBetween: 0,
             speed: 800,
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            },
         });
     }
 
-    // ========== ПЛАВНАЯ ПРОКРУТКА ==========
+    // ========== ПЛАВНАЯ ПРОКРУТКА К ЯКОРЯМ ==========
     $('a[href^="#"]').on('click', function(event) {
         var target = $(this.getAttribute('href'));
         if (target.length) {
@@ -36,13 +35,12 @@ $(document).ready(function() {
         }
     });
 
-    // ========== ОБРАБОТКА ФОРМ ==========
+    // ========== ОБРАБОТКА ФОРМЫ ==========
     $('form').on('submit', function(e) {
         e.preventDefault();
         var form = $(this);
-        var formData = form.serialize();
 
-        // Валидация
+        // Валидация полей
         var isValid = true;
         form.find('[required]').each(function() {
             if (!$(this).val().trim()) {
@@ -53,13 +51,22 @@ $(document).ready(function() {
             }
         });
 
+        // Проверка чекбокса
+        var checkbox = form.find('.custom-checkbox input[type="checkbox"]');
+        if (!checkbox.is(':checked')) {
+            isValid = false;
+            checkbox.closest('.custom-checkbox').find('.checkmark').css('outline', '2px solid #dc3545');
+        } else {
+            checkbox.closest('.custom-checkbox').find('.checkmark').css('outline', '');
+        }
+
         if (!isValid) {
-            alert('Пожалуйста, заполните все обязательные поля!');
+            alert('Пожалуйста, заполните все обязательные поля и дайте согласие на обработку данных!');
             return;
         }
 
         // Имитация отправки
-        var btn = form.find('button[type="submit"], .btn-green');
+        var btn = form.find('.btn-submit');
         var originalText = btn.text();
         btn.text('Отправка...').prop('disabled', true);
 
@@ -67,12 +74,8 @@ $(document).ready(function() {
             alert('✅ Заявка успешно отправлена!');
             btn.text(originalText).prop('disabled', false);
             form[0].reset();
+            form.find('.custom-checkbox input[type="checkbox"]').prop('checked', true);
         }, 1500);
-    });
-
-    // ========== ЧЕКБОКС ==========
-    $('.checkbox-box').on('click', function() {
-        $(this).toggleClass('active');
     });
 
     // ========== КНОПКА "НАВЕРХ" ==========

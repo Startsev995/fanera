@@ -2,68 +2,226 @@
    ГЛАВНАЯ СТРАНИЦА
    ============================================ */
 
-/* ----- HERO СЕКЦИЯ ----- */
+/* ============================================
+   HERO СЕКЦИЯ
+   ============================================ */
 .hero-section {
     position: relative;
-    min-height: 910px;
-    background: var(--color-primary);
     overflow: hidden;
-    padding: 36px 0 0;
 }
 
-.hero-section .hero-bg-shape {
+.hero-section-bg {
+    padding-top: 36px;
+    margin-bottom: 160px;
+    background: var(--color-primary);
+}
+
+.hero-bg-shape-2 {
     position: absolute;
     width: 1083.08px;
-    height: 1337.51px;
-    right: -200px;
-    top: -324.84px;
-    background: var(--color-secondary);
-    opacity: 0.3;
-    pointer-events: none;
+    height: 1010px;
+    right: -400px;
+    top: -140px;
+    z-index: 1;
+    background: url(../svg/main-header-bg.svg) no-repeat;
 }
 
 .hero-section .hero-blur {
     position: absolute;
     width: 607.57px;
-    height: 362.40px;
+    height: 362.4px;
     right: 100px;
     top: 316.16px;
     transform: rotate(35deg);
-    opacity: 0.70;
+    opacity: 0.7;
     background: #080809;
     border-radius: var(--radius-full);
     filter: blur(100px);
     pointer-events: none;
 }
 
-.hero-section .hero-title {
+/* Верхняя часть: логотип + навигация */
+.hero-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 80px;
+    position: relative;
+    z-index: 2;
+}
+
+.logo-wrapper {
+    position: relative;
+    width: 187.49px;
+    height: 98.34px;
+    flex-shrink: 0;
+}
+
+.logo-wrapper .logo-square {
+    position: absolute;
+    width: 84.19px;
+    height: 84.19px;
+    background: #FDFFE9;
+    border: 1.89px solid var(--color-border);
+}
+
+.logo-wrapper .logo-square:nth-child(1) {
+    left: 32.81px;
+    top: 7px;
+}
+
+.logo-wrapper .logo-square:nth-child(2) {
+    left: 31.17px;
+    top: 7px;
+}
+
+.logo-wrapper .logo-square:nth-child(3) {
+    left: 1.64px;
+    top: 7px;
+}
+
+.logo-wrapper .logo-square:nth-child(4) {
+    left: 0;
+    top: 7px;
+}
+
+.logo-wrapper .logo-text {
+    position: absolute;
+    width: 73.48px;
+    height: 35.57px;
+    left: 5.36px;
+    top: 31.31px;
+    background: #005844;
+}
+
+.hero-nav {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-nav-link {
     font-family: var(--font-primary);
+    font-size: 20px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.5);
+    transition: var(--transition-default);
+    padding: 4px 0;
+    border-bottom: 2px solid transparent;
+}
+
+.hero-nav-link:hover {
+    color: var(--color-white);
+    border-bottom-color: var(--color-white);
+}
+
+/* Средняя часть: контент */
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 694px;
+}
+
+.hero-title {
     font-size: 52px;
     font-weight: 700;
     line-height: 68.65px;
     color: var(--color-white);
-    max-width: 694px;
+    margin-bottom: 40px;
 }
 
-.hero-section .hero-description {
-    font-family: var(--font-primary);
+.hero-description {
     font-size: 18px;
     font-weight: 400;
     line-height: 23.76px;
     color: var(--color-white);
+    margin-bottom: 45px;
     max-width: 524px;
 }
 
-.hero-section .hero-phone {
-    font-family: var(--font-primary);
+.hero-btn-wrap {
+    display: flex;
+    gap: 30px;
+}
+
+/* Изображение в Hero */
+.hero-image-wrapper {
+    flex: 1;
+    position: relative;
+    max-width: 883px;
+}
+
+.hero-image-wrapper .hero-image {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-sm);
+    display: block;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-image-wrapper .hero-outline {
+    position: absolute;
+    width: auto;
+    height: 100%;
+    right: 0px;
+    bottom: -55px;
+    z-index: 1;
+}
+
+.hero-image-wrapper .hero-label {
+    position: absolute;
+    right: 0;
+    top: -55px;
+    text-align: right;
+}
+
+.hero-image-wrapper .hero-label-title {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30.3px;
+    color: var(--color-white);
+}
+
+.hero-image-wrapper .hero-label-sub {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24.24px;
+    color: rgba(255, 255, 255, 0.79);
+}
+
+/* Нижняя часть: контакты + язык */
+.hero-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.hero-phone {
     font-size: 24px;
     font-weight: 700;
     line-height: 31.69px;
     color: var(--color-white);
 }
 
-.hero-section .hero-address {
-    font-family: var(--font-primary);
+.hero-address {
     font-size: 20px;
     font-weight: 500;
     line-height: 25.6px;
@@ -71,93 +229,65 @@
     max-width: 560px;
 }
 
-.hero-section .hero-image {
-    position: absolute;
-    right: 100px;
-    top: 228px;
-    width: 883px;
-    height: 510px;
-    object-fit: cover;
-    z-index: 2;
-}
-
-.hero-section .hero-outline {
-    position: absolute;
-    right: 80px;
-    top: 324.5px;
-    width: 392.77px;
-    height: 191px;
-    border: 1px solid var(--color-white);
-    z-index: 1;
-}
-
-.hero-section .hero-label {
-    position: absolute;
-    right: 120px;
-    top: 205.5px;
-    z-index: 3;
-    text-align: right;
-}
-
-.hero-section .hero-label .label-title {
-    font-family: var(--font-primary);
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 30.3px;
-    color: var(--color-white);
-}
-
-.hero-section .hero-label .label-sub {
-    font-family: var(--font-primary);
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24.24px;
-    color: rgba(255, 255, 255, 0.79);
-}
-
-.hero-section .lang-switch {
+.lang-switch {
     padding: 16px;
     border: 2px solid rgba(255, 255, 255, 0.6);
+    border-radius: var(--radius-sm);
     display: inline-flex;
     align-items: center;
     gap: 4px;
+    flex-shrink: 0;
 }
 
-.hero-section .lang-switch .lang-active {
+.lang-switch > span {
+    cursor: pointer;
+}
+
+.lang-switch .lang-active {
     color: var(--color-white);
-    font-family: var(--font-primary);
     font-size: 20px;
     font-weight: 600;
     line-height: 26.4px;
 }
 
-.hero-section .lang-switch .lang-inactive {
-    color: rgba(255, 255, 255, 0.6);
-    font-family: var(--font-primary);
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 26.4px;
-}
-
-.hero-section .lang-switch .lang-divider {
+.lang-switch .lang-divider {
     color: rgba(255, 255, 255, 0.5);
-    font-family: var(--font-primary);
     font-size: 20px;
     font-weight: 300;
     line-height: 26.4px;
 }
 
-/* ----- СЕКЦИЯ "ЧТО МЫ ИЗГОТАВЛИВАЕМ" ----- */
-.products-section {
-    padding: 100px 0 0;
+.lang-switch .lang-inactive {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 26.4px;
 }
 
-.products-section .products-header {
+/* ============================================
+   СЕКЦИЯ ПРОДУКЦИИ
+   ============================================ */
+.products-section {
+    padding: 200px 0 0;
+}
+
+.products-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 207px;
     margin-bottom: 46px;
 }
 
-.products-section .products-subtitle {
-    font-family: var(--font-primary);
+.products-header .section-title {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 63.37px;
+    color: var(--color-text);
+    max-width: 619px;
+}
+
+.products-header .products-subtitle {
     font-size: 18px;
     font-weight: 500;
     line-height: 26.01px;
@@ -165,23 +295,57 @@
     max-width: 617px;
 }
 
-/* Баннер поставки */
+.btn-all-products {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 58px;
+    padding: 10px 22px;
+    border: 2px solid rgba(26, 27, 34, 0.6);
+    border-radius: var(--radius-sm);
+    font-family: var(--font-primary);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26.01px;
+    color: rgba(26, 27, 34, 0.6);
+    background: transparent;
+    transition: var(--transition-default);
+    cursor: pointer;
+}
+
+.btn-all-products:hover {
+    background: var(--color-text);
+    color: var(--color-white);
+    border-color: var(--color-text);
+}
+
 .shipping-banner {
     background: var(--color-dark-green);
     border-radius: var(--radius-sm);
     padding: 52px 74px 51px 55px;
     margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.shipping-banner .banner-left {
+    display: flex;
+    align-items: center;
+    gap: 33px;
 }
 
 .shipping-banner .banner-icon {
     width: 94px;
     height: 94px;
-    background: var(--color-white);
+    background: url(../svg/cube.svg);
     border-radius: var(--radius-full);
+    flex-shrink: 0;
 }
 
 .shipping-banner .banner-title {
-    font-family: var(--font-primary);
     font-size: 30px;
     font-weight: 700;
     line-height: 39.61px;
@@ -189,30 +353,86 @@
 }
 
 .shipping-banner .banner-text {
-    font-family: var(--font-primary);
     font-size: 18px;
     font-weight: 500;
     line-height: 26.01px;
     color: rgba(255, 255, 255, 0.8);
 }
 
-/* ----- СЕКЦИЯ "О КОМПАНИИ" ----- */
+/* ============================================
+   СЕКЦИЯ "О КОМПАНИИ"
+   ============================================ */
 .about-section {
     background: var(--color-bg-light);
-    padding: 71px 0 266px;
+    padding: 71px 0 100px;
     margin-top: 80px;
 }
 
-.about-section .about-number {
-    font-family: var(--font-primary);
+.about-row {
+    display: flex;
+    align-items: center;
+    gap: 90px;
+    margin-bottom: 40px;
+}
+
+.about-slider-wrapper {
+    flex: 0 0 740px;
+    max-width: 740px;
+    position: relative;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+}
+
+.about-swiper {
+    width: 100%;
+    height: 672px;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+}
+
+.about-swiper .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-pagination {
+    position: absolute;
+    bottom: 40px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    display: flex;
+    gap: 12px;
+    width: auto !important;
+}
+
+.about-pagination .swiper-pagination-bullet {
+    width: 40px;
+    height: 4px;
+    border-radius: 2px;
+    background: rgba(255, 255, 255, 0.4);
+    opacity: 1;
+    transition: var(--transition-default);
+}
+
+.about-pagination .swiper-pagination-bullet-active {
+    background: var(--color-white);
+    opacity: 1;
+}
+
+.about-text-wrapper {
+    flex: 1;
+    min-width: 0;
+}
+
+.about-number {
     font-size: 48px;
     font-weight: 700;
     line-height: 63.37px;
     color: var(--color-text);
 }
 
-.about-section .about-text {
-    font-family: var(--font-primary);
+.about-text {
     font-size: 18px;
     font-weight: 400;
     line-height: 26.01px;
@@ -220,26 +440,50 @@
     max-width: 616px;
 }
 
-.about-section .about-link {
-    font-family: var(--font-primary);
+.about-link {
     font-size: 18px;
     font-weight: 600;
     line-height: 23.76px;
     color: var(--color-accent-light);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    padding-right: 20px;
 }
 
-.about-section .about-link::after {
-    content: '→';
-    margin-left: 8px;
+.about-link:hover {
+    transition: padding-right .3s;
+    padding-right: 30px;
 }
 
-.about-section .advantage-item {
+.about-link::after {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: url(../svg/arrow-link.svg);
+}
+
+/* Преимущества - 3 в ряд */
+.advantages-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    padding-top: 10px;
+}
+
+.advantages-row .advantage-item {
     display: flex;
     align-items: center;
     gap: 16px;
+    flex: 1;
+    min-width: 200px;
 }
 
-.about-section .advantage-item .advantage-icon {
+.advantages-row .advantage-item .advantage-icon {
     padding: 18px;
     background: #FEFEFE;
     border-radius: var(--radius-sm);
@@ -248,23 +492,29 @@
     justify-content: center;
     min-width: 76px;
     min-height: 76px;
+    flex-shrink: 0;
 }
 
-.about-section .advantage-item .advantage-text {
-    font-family: var(--font-primary);
+.advantages-row .advantage-item .advantage-icon svg {
+    width: 40px;
+    height: 40px;
+}
+
+.advantages-row .advantage-item .advantage-text {
     font-size: 18px;
     font-weight: 600;
     line-height: 27.27px;
     color: rgba(26, 27, 34, 0.6);
 }
 
-/* ----- СЕКЦИЯ "ОФОРМИТЬ ЗАЯВКУ" ----- */
+/* ============================================
+   СЕКЦИЯ ЗАЯВКИ
+   ============================================ */
 .request-section {
     padding: 80px 0 60px;
 }
 
-.request-section .request-title {
-    font-family: var(--font-primary);
+.request-title {
     font-size: 48px;
     font-weight: 700;
     line-height: 63.37px;
@@ -272,135 +522,396 @@
     margin-bottom: 52px;
 }
 
-.request-section .request-description {
-    font-family: var(--font-primary);
+.request-description {
     font-size: 18px;
     font-weight: 500;
     line-height: 26.01px;
     color: var(--color-text);
 }
 
-.request-section .checkbox-wrapper {
+/* Форма: 3 колонки */
+.form-actions {
     display: flex;
-    align-items: flex-start;
-    gap: 12px;
-}
-
-.request-section .checkbox-wrapper .checkbox-box {
-    width: 24px;
-    height: 24px;
-    min-width: 24px;
-    background: var(--color-input-bg);
-    border-radius: 4px;
-    cursor: pointer;
-    transition: var(--transition-default);
-}
-
-.request-section .checkbox-wrapper .checkbox-box.active {
-    background: var(--color-accent-light);
-}
-
-.request-section .checkbox-wrapper .checkbox-label {
-    font-family: var(--font-primary);
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24.24px;
-    color: var(--color-text);
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    width: 100%;
 }
 
 /* ============================================
-   МЕДИА-ЗАПРОСЫ ДЛЯ ГЛАВНОЙ
+   АДАПТИВ
    ============================================ */
 @media (max-width: 1400px) {
-    .hero-section .hero-image {
-        right: 20px;
-        width: 700px;
-        height: 404px;
-    }
-
-    .hero-section .hero-outline {
+    .hero-image-wrapper .hero-outline {
         display: none;
     }
 
-    .hero-section .hero-label {
-        right: 40px;
-        top: 150px;
-    }
-}
-
-@media (max-width: 1200px) {
-    .hero-section .hero-image {
-        position: relative;
-        right: auto;
-        top: auto;
-        width: 100%;
-        height: auto;
-        margin-top: 30px;
-    }
-
-    .hero-section .hero-blur {
-        display: none;
-    }
-
-    .hero-section .hero-bg-shape {
-        display: none;
-    }
-
-    .hero-section .hero-outline {
-        display: none;
-    }
-
-    .hero-section .hero-label {
+    .hero-image-wrapper .hero-label {
         position: relative;
         right: auto;
         top: auto;
         text-align: left;
-        margin-top: 20px;
+        margin-top: 16px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .hero-section .hero-blur {
+        display: none;
+    }
+
+    .hero-section .hero-bg-shape-2 {
+        display: none;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .hero-title {
+        font-size: 40px;
+        line-height: 52px;
+    }
+
+    .hero-image-wrapper {
+        max-width: 100%;
+    }
+
+    .products-header {
+        flex-direction: column;
+        gap: 20px;
     }
 
     .shipping-banner {
-        padding: 30px 20px;
+        padding: 30px 24px;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .about-section {
         padding: 40px 0 60px;
     }
+
+    .about-row {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .about-slider-wrapper {
+        flex: 1 1 auto;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .about-swiper {
+        height: 400px;
+    }
+
+    .about-text-wrapper {
+        width: 100%;
+    }
+
+    .about-text {
+        max-width: 100%;
+    }
+
+    .about-pagination .swiper-pagination-bullet {
+        width: 30px;
+        height: 3px;
+    }
+
+    .form-actions {
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .custom-checkbox {
+        flex: 1 1 100%;
+    }
 }
 
 @media (max-width: 992px) {
-    .products-section .products-header {
+    .hero-top {
         flex-direction: column;
+        align-items: flex-start;
         gap: 20px;
     }
 
-    .request-section .request-title {
+    .hero-nav {
+        flex-wrap: wrap;
+        gap: 20px 30px;
+    }
+
+    .hero-nav-link {
+        font-size: 18px;
+    }
+
+    .hero-title {
         font-size: 32px;
         line-height: 42px;
     }
-}
 
-@media (max-width: 768px) {
-    .hero-section .hero-title {
-        font-size: 32px;
-        line-height: 42px;
-    }
-
-    .hero-section .hero-description {
+    .hero-description {
         font-size: 16px;
         line-height: 22px;
     }
 
-    .shipping-banner .banner-title {
-        font-size: 22px;
-        line-height: 30px;
+    .hero-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
     }
 
-    .about-section .about-number {
+    .hero-address {
+        font-size: 16px;
+        line-height: 22px;
+        max-width: 100%;
+    }
+
+    .hero-phone {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .lang-switch {
+        padding: 10px 14px;
+    }
+
+    .lang-switch .lang-active,
+    .lang-switch .lang-inactive,
+    .lang-switch .lang-divider {
+        font-size: 16px;
+    }
+
+    .products-header .section-title {
+        font-size: 36px;
+        line-height: 48px;
+    }
+
+    .about-number {
+        font-size: 36px;
+        line-height: 48px;
+    }
+
+    .about-swiper {
+        height: 350px;
+    }
+
+    .request-title {
         font-size: 32px;
         line-height: 42px;
     }
 
-    .request-section .request-description {
+    .advantages-row {
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .advantages-row .advantage-item {
+        flex: 1 1 calc(50% - 16px);
+        min-width: 180px;
+    }
+
+    .advantages-row .advantage-item .advantage-icon {
+        min-width: 60px;
+        min-height: 60px;
+        padding: 14px;
+    }
+
+    .advantages-row .advantage-item .advantage-icon svg {
+        width: 32px;
+        height: 32px;
+    }
+
+    .advantages-row .advantage-item .advantage-text {
+        font-size: 15px;
+        line-height: 22px;
+    }
+
+    .request-description {
         font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding-top: 20px;
+        min-height: auto;
+        padding-bottom: 40px;
+    }
+
+    .hero-title {
+        font-size: 28px;
+        line-height: 38px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+        line-height: 22px;
+    }
+
+    .hero-btn-wrap {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-nav {
+        gap: 12px 20px;
+    }
+
+    .hero-nav-link {
+        font-size: 16px;
+    }
+
+    .hero-phone {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .hero-address {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .logo-wrapper {
+        width: 140px;
+        height: 74px;
+    }
+
+    .logo-wrapper .logo-square {
+        width: 63px;
+        height: 63px;
+    }
+
+    .logo-wrapper .logo-square:nth-child(1) {
+        left: 24.6px;
+        top: 5.25px;
+    }
+
+    .logo-wrapper .logo-square:nth-child(2) {
+        left: 23.4px;
+        top: 5.25px;
+    }
+
+    .logo-wrapper .logo-square:nth-child(3) {
+        left: 1.23px;
+        top: 5.25px;
+    }
+
+    .logo-wrapper .logo-square:nth-child(4) {
+        left: 0;
+        top: 5.25px;
+    }
+
+    .logo-wrapper .logo-text {
+        width: 55px;
+        height: 26.7px;
+        left: 4px;
+        top: 23.5px;
+    }
+
+    .products-header .section-title {
+        font-size: 28px;
+        line-height: 38px;
+    }
+
+    .products-header .products-subtitle {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .shipping-banner .banner-title {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .shipping-banner .banner-text {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .shipping-banner .banner-left {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .shipping-banner .banner-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .about-number {
+        font-size: 28px;
+        line-height: 38px;
+    }
+
+    .about-text {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .about-swiper {
+        height: 280px;
+    }
+
+    .about-pagination {
+        bottom: 16px !important;
+        gap: 8px;
+    }
+
+    .about-pagination .swiper-pagination-bullet {
+        width: 20px;
+        height: 3px;
+    }
+
+    .about-section {
+        padding: 30px 0 40px;
+        margin-top: 40px;
+    }
+
+    .advantages-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .advantages-row .advantage-item {
+        flex: 1 1 auto;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .advantages-row .advantage-item .advantage-icon {
+        min-width: 56px;
+        min-height: 56px;
+        padding: 12px;
+    }
+
+    .advantages-row .advantage-item .advantage-icon svg {
+        width: 28px;
+        height: 28px;
+    }
+
+    .advantages-row .advantage-item .advantage-text {
+        font-size: 15px;
+        line-height: 22px;
+    }
+
+    .request-title {
+        font-size: 28px;
+        line-height: 38px;
+    }
+
+    .btn-all-products {
+        font-size: 16px;
+        height: 48px;
+        padding: 8px 16px;
     }
 }
