@@ -1,0 +1,404 @@
+/* ============================================
+   СТРАНИЦА "РУКОВОДСТВО"
+   ============================================ */
+
+/* Хлебные крошки */
+.management-breadcrumbs {
+    padding-top: 28px;
+    padding-bottom: 28px;
+}
+
+/* Баннер с изображением */
+.management-hero {
+    margin-bottom: 40px;
+}
+
+.management-hero .hero-image {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    width: 100%;
+}
+
+.management-hero .hero-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Заголовок страницы */
+.management-header {
+    margin-bottom: 40px;
+}
+
+.management-header .page-title {
+    font-family: var(--font-primary);
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 52.81px;
+    color: var(--color-text);
+    margin-bottom: 24px;
+}
+
+.management-header .page-description {
+    font-family: var(--font-primary);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28.44px;
+    color: var(--color-text);
+    max-width: 783px;
+}
+
+/* Карточка сотрудника */
+.employee-card {
+    background: #F4F4F4;
+    border-radius: var(--radius-md);
+    padding: 30px 20px 30px 28px;
+    margin-bottom: 26px;
+    transition: var(--transition-default);
+}
+
+.employee-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.employee-card .employee-avatar {
+    width: 154px;
+    height: 154px;
+    border-radius: 50%;
+    background: #D9D9D9;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.employee-card .employee-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.employee-card .employee-info {
+    flex: 1;
+    padding-left: 25px;
+}
+
+.employee-card .employee-name {
+    font-family: var(--font-primary);
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 38.4px;
+    color: var(--color-text);
+    margin-bottom: 7px;
+}
+
+.employee-card .employee-position {
+    font-family: var(--font-primary);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22.4px;
+    color: #303030;
+    margin-bottom: 7px;
+}
+
+.employee-card .employee-description {
+    font-family: var(--font-primary);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.6px;
+    color: #5A5A5A;
+    max-width: 491px;
+}
+
+.employee-card .employee-arrow {
+    width: 45px;
+    height: 45px;
+    background: var(--color-white);
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: var(--transition-default);
+}
+
+.employee-card .employee-arrow:hover {
+    background: var(--color-accent);
+}
+
+.employee-card .employee-arrow:hover svg {
+    fill: var(--color-white);
+}
+
+.employee-card .employee-arrow svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* ============================================
+   САЙДБАР (общий с about.css, но переопределяем)
+   ============================================ */
+
+/* Боковая навигация */
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
+
+.sidebar-nav .nav-block {
+    padding: 19px 37px;
+    background: #F4F4F4;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.sidebar-nav .nav-block .nav-title {
+    font-family: var(--font-primary);
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--color-text);
+    margin-bottom: 17px;
+}
+
+.sidebar-nav .nav-block .nav-title.active {
+    font-weight: 600;
+}
+
+.sidebar-nav .nav-block .nav-link-item {
+    font-family: var(--font-primary);
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--color-text);
+    padding: 4px 0;
+    display: block;
+    transition: var(--transition-default);
+}
+
+.sidebar-nav .nav-block .nav-link-item:hover {
+    color: var(--color-accent-light);
+}
+
+.sidebar-nav .nav-block .nav-link-item.active {
+    font-weight: 600;
+    color: var(--color-accent-light);
+}
+
+/* Блок контактов в сайдбаре */
+.sidebar-contacts {
+    padding: 16px 20px 22px;
+    background: rgba(31, 31, 31, 0.05);
+    border-radius: var(--radius-md);
+}
+
+.sidebar-contacts .contacts-title {
+    font-family: var(--font-primary);
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 32px;
+    color: rgba(0, 0, 0, 0.2);
+    margin-bottom: 12px;
+}
+
+.sidebar-contacts .contacts-subtitle {
+    font-family: var(--font-primary);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color: rgba(31, 31, 31, 0.8);
+    margin-bottom: 15px;
+}
+
+.sidebar-contacts .contact-label {
+    font-family: var(--font-primary);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    color: rgba(31, 31, 31, 0.8);
+    margin-bottom: 4px;
+}
+
+.sidebar-contacts .contact-value {
+    font-family: var(--font-primary);
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 28px;
+    color: #1F1F1F;
+    margin-bottom: 15px;
+}
+
+.sidebar-contacts .contact-value:last-of-type {
+    margin-bottom: 0;
+}
+
+/* Блок "Написать нам" */
+.sidebar-write {
+    padding: 16px 18px 20px;
+    background: var(--color-accent);
+    border-radius: var(--radius-md);
+}
+
+.sidebar-write .write-title {
+    font-family: var(--font-primary);
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 32px;
+    color: var(--color-white);
+    margin-bottom: 8px;
+}
+
+.sidebar-write .write-subtitle {
+    font-family: var(--font-primary);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 18px;
+}
+
+.sidebar-write .write-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 24px;
+    background: var(--color-white);
+    border-radius: 7px;
+    font-family: var(--font-primary);
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 22.44px;
+    color: var(--color-accent);
+    border: none;
+    cursor: pointer;
+    transition: var(--transition-default);
+    width: 100%;
+    max-width: 332px;
+}
+
+.sidebar-write .write-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* ============================================
+   АДАПТИВ
+   ============================================ */
+@media (max-width: 1200px) {
+    .management-header .page-title {
+        font-size: 32px;
+        line-height: 42px;
+    }
+
+    .management-header .page-description {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 992px) {
+    .management-header .page-title {
+        font-size: 28px;
+        line-height: 38px;
+    }
+
+    .employee-card {
+        padding: 20px;
+    }
+
+    .employee-card .employee-avatar {
+        width: 100px;
+        height: 100px;
+    }
+
+    .employee-card .employee-name {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    .employee-card .employee-info {
+        padding-left: 16px;
+    }
+
+    .employee-card .employee-description {
+        max-width: 100%;
+    }
+
+    .sidebar-nav {
+        margin-top: 40px;
+    }
+
+    .sidebar-nav .nav-block {
+        padding: 16px 24px;
+    }
+
+    .sidebar-write .write-btn {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .management-header .page-title {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .management-header .page-description {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .employee-card {
+        padding: 16px;
+    }
+
+    .employee-card .employee-avatar {
+        width: 80px;
+        height: 80px;
+    }
+
+    .employee-card .employee-name {
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    .employee-card .employee-position {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .employee-card .employee-info {
+        padding-left: 12px;
+    }
+
+    .employee-card .employee-arrow {
+        width: 36px;
+        height: 36px;
+    }
+
+    .employee-card .employee-arrow svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .sidebar-nav .nav-block .nav-title {
+        font-size: 16px;
+    }
+
+    .sidebar-nav .nav-block .nav-link-item {
+        font-size: 16px;
+    }
+
+    .sidebar-contacts .contacts-title {
+        font-size: 22px;
+        line-height: 28px;
+    }
+
+    .sidebar-contacts .contact-value {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .sidebar-write .write-title {
+        font-size: 22px;
+        line-height: 28px;
+    }
+}
