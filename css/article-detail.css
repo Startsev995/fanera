@@ -1,0 +1,443 @@
+/* ============================================
+   ДЕТАЛЬНАЯ СТРАНИЦА СТАТЬИ
+   ============================================ */
+
+/* Хлебные крошки */
+.article-breadcrumbs {
+    padding-top: 28px;
+    padding-bottom: 28px;
+}
+
+/* Заголовок страницы */
+.article-header {
+    padding: 10px 0 30px;
+}
+
+.article-header .article-title {
+    font-family: var(--font-primary);
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 52.81px;
+    color: var(--color-text);
+    max-width: 649px;
+}
+
+/* Мета-информация */
+.article-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background: var(--color-gray-light);
+    border-radius: 34px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    width: fit-content;
+}
+
+.article-meta .meta-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.article-meta .meta-icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+.article-meta .meta-text {
+    font-family: var(--font-primary);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color: rgba(31, 31, 31, 0.8);
+}
+
+/* Кнопка "Поделиться" */
+.share-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    background: rgba(31, 31, 31, 0.05);
+    border-radius: var(--radius-sm);
+    border: none;
+    cursor: pointer;
+    transition: var(--transition-default);
+    margin-left: auto;
+}
+
+.share-btn:hover {
+    background: rgba(31, 31, 31, 0.12);
+    transform: scale(1.05);
+}
+
+.share-btn svg {
+    width: 25px;
+    height: 25px;
+}
+
+/* Контент статьи */
+.article-content {
+    padding-bottom: 60px;
+}
+
+.article-content .article-text {
+    font-family: var(--font-primary);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #1F1F1F;
+    max-width: 680px;
+}
+
+.article-content .article-text p {
+    margin-bottom: 18px;
+}
+
+.article-content .article-text strong {
+    font-weight: 700;
+}
+
+/* Заголовки разделов */
+.article-content .section-title {
+    font-family: var(--font-primary);
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 32px;
+    color: rgba(0, 0, 0, 0.2);
+    margin-top: 48px;
+    margin-bottom: 20px;
+}
+
+.article-content .section-title:first-of-type {
+    margin-top: 0;
+}
+
+/* Изображения */
+.article-main-image {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    width: 100%;
+    max-width: 680px;
+}
+
+.article-main-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.article-image-full {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    width: 100%;
+    max-width: 680px;
+    margin-top: 30px;
+}
+
+.article-image-full img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Плей-кнопка на изображении */
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 32px;
+    background: #51842A;
+    border-radius: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition-default);
+    z-index: 2;
+}
+
+.play-button:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+    box-shadow: 0 8px 30px rgba(81, 132, 42, 0.4);
+}
+
+.play-button svg {
+    width: 28px;
+    height: 28px;
+}
+
+/* Боковая колонка */
+.article-sidebar .sidebar-image {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    margin-bottom: 24px;
+}
+
+.article-sidebar .sidebar-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Баннер в боковой колонке */
+.sidebar-banner {
+    background: var(--color-primary);
+    border-radius: var(--radius-md);
+    padding: 29px 24px 24px;
+    min-height: 290px;
+}
+
+.sidebar-banner .banner-title {
+    font-family: var(--font-primary);
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 32px;
+    color: var(--color-white);
+    margin-bottom: 8px;
+}
+
+.sidebar-banner .banner-subtitle {
+    font-family: var(--font-primary);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 20px;
+}
+
+.sidebar-banner .banner-image {
+    margin-bottom: 20px;
+}
+
+.sidebar-banner .banner-image img {
+    width: 100%;
+    max-width: 310px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.sidebar-banner .banner-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 24px;
+    background: var(--color-white);
+    border-radius: 7px;
+    font-family: var(--font-primary);
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 22.44px;
+    color: var(--color-accent);
+    border: none;
+    cursor: pointer;
+    transition: var(--transition-default);
+    width: 100%;
+    max-width: 232px;
+}
+
+.sidebar-banner .banner-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Блок "Отдел продаж" */
+.sales-contact {
+    background: rgba(31, 31, 31, 0.05);
+    border-radius: var(--radius-md);
+    padding: 32px 24px;
+    margin-top: 24px;
+}
+
+.sales-contact .contact-title {
+    font-family: var(--font-primary);
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 32px;
+    color: rgba(0, 0, 0, 0.2);
+    margin-bottom: 8px;
+}
+
+.sales-contact .contact-subtitle {
+    font-family: var(--font-primary);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color: rgba(31, 31, 31, 0.8);
+    margin-bottom: 20px;
+}
+
+.sales-contact .contact-label {
+    font-family: var(--font-primary);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    color: rgba(31, 31, 31, 0.8);
+    margin-bottom: 4px;
+}
+
+.sales-contact .contact-value {
+    font-family: var(--font-primary);
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 28px;
+    color: #1F1F1F;
+    margin-bottom: 16px;
+}
+
+.sales-contact .contact-value:last-of-type {
+    margin-bottom: 0;
+}
+
+.sales-contact .contact-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 24px;
+    background: var(--color-accent);
+    border-radius: 7px;
+    font-family: var(--font-primary);
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 22.44px;
+    color: var(--color-white);
+    border: none;
+    cursor: pointer;
+    transition: var(--transition-default);
+    width: 100%;
+    max-width: 431px;
+    margin-top: 16px;
+}
+
+.sales-contact .contact-btn:hover {
+    background: #2a6b2f;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(50, 125, 55, 0.3);
+}
+
+/* ============================================
+   АДАПТИВ
+   ============================================ */
+@media (max-width: 1200px) {
+    .article-header .article-title {
+        font-size: 32px;
+        line-height: 42px;
+        max-width: 100%;
+    }
+
+    .article-content .article-text {
+        max-width: 100%;
+    }
+
+    .article-main-image {
+        max-width: 100%;
+    }
+
+    .article-image-full {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 992px) {
+    .article-header {
+        padding: 10px 0 20px;
+    }
+
+    .article-header .article-title {
+        font-size: 28px;
+        line-height: 38px;
+    }
+
+    .article-sidebar {
+        margin-top: 40px;
+    }
+
+    .sidebar-banner {
+        min-height: auto;
+    }
+
+    .sidebar-banner .banner-btn {
+        max-width: 100%;
+    }
+
+    .sales-contact .contact-btn {
+        max-width: 100%;
+    }
+
+    .share-btn {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .article-header .article-title {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .article-meta {
+        padding: 8px 12px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .article-meta .meta-text {
+        font-size: 14px;
+    }
+
+    .article-content .article-text {
+        font-size: 15px;
+        line-height: 22px;
+    }
+
+    .article-content .section-title {
+        font-size: 28px;
+        line-height: 28px;
+        margin-top: 32px;
+    }
+
+    .sidebar-banner .banner-title {
+        font-size: 22px;
+        line-height: 28px;
+    }
+
+    .sidebar-banner .banner-image img {
+        max-width: 100%;
+    }
+
+    .sales-contact .contact-title {
+        font-size: 22px;
+        line-height: 28px;
+    }
+
+    .sales-contact .contact-value {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .share-btn {
+        width: 44px;
+        height: 44px;
+    }
+
+    .share-btn svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .play-button {
+        padding: 24px;
+    }
+
+    .play-button svg {
+        width: 22px;
+        height: 22px;
+    }
+}
