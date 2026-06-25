@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Производство — Жешартский фанерный комбинат</title>
+
+    <!-- ===== Schema.org ===== -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "name": "Производство",
+        "description": "Производственные мощности Жешартского фанерного комбината",
+        "url": "https://example.com/production.html",
+        "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Главная",
+                    "item": "https://example.com/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "О компании",
+                    "item": "https://example.com/about.html"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "Производство",
+                    "item": "https://example.com/production.html"
+                }
+            ]
+        },
+        "mainEntity": {
+            "@type": "Organization",
+            "name": "Жешартский фанерный комбинат",
+            "description": "Производственные мощности комбината"
+        }
+    }
+    </script>
+
+    <!-- ===== Bootstrap 4 ===== -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- ===== Swiper ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css">
+
+    <!-- ===== Общие стили ===== -->
+    <link rel="stylesheet" href="css/common.css">
+
+    <!-- ===== Стили "Производство" ===== -->
+    <link rel="stylesheet" href="css/production.css">
+</head>
+<body>
+
+    <!-- ========================================
+         MICRODATA: ОРГАНИЗАЦИЯ
+    ======================================== -->
+    <div itemscope itemtype="https://schema.org/Organization">
+        <meta itemprop="name" content="Жешартский фанерный комбинат">
+        <meta itemprop="url" content="https://example.com">
+        <meta itemprop="telephone" content="+7-912-140-10-08">
+        <meta itemprop="address" content="169045, Россия, Республика Коми, п. Жешарт, ул. Гагарина, д. 1">
+        <meta itemprop="foundingDate" content="1946">
+    </div>
+
+    <!-- ========================================
+         СТРАНИЦА С MICRODATA
+    ======================================== -->
+    <div itemscope itemtype="https://schema.org/AboutPage">
+
+        <!-- ========== ШАПКА ========== -->
+        <header class="header-custom">
+            <div class="container-custom">
+                <div class="row align-items-center">
+                    <div class="col-lg-3 col-md-4">
+                        <div class="logo-header">
+                            <div class="logo-squares">
+                                <div class="sq"></div>
+                                <div class="sq"></div>
+                                <div class="sq"></div>
+                                <div class="sq"></div>
+                                <div class="sq-overlay"></div>
+                            </div>
+                            <div class="logo-text" itemprop="name">Жешартский фанерный комбинат</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 col-md-8 text-md-right mt-3 mt-md-0">
+                        <div class="header-phone" itemprop="telephone">+7 (8212) 63-02-18</div>
+                        <div class="header-address" itemprop="address">Республика Коми, п. Жешарт, ул. Гагарина, д. 1</div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- ========== НАВИГАЦИЯ ========== -->
+        <nav class="nav-catalog">
+            <div class="container-custom">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link-custom active" href="about.html">О компании</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link-custom" href="catalog.html">Каталог возможностей</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link-custom" href="press.html">Пресс-служба</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link-custom" href="#">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- ========== ХЛЕБНЫЕ КРОШКИ ========== -->
+        <div class="production-breadcrumbs" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <div class="container-custom">
+                <nav aria-label="Хлебные крошки">
+                    <ol class="breadcrumb-custom">
+                        <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                            <a href="index.html" itemprop="item">
+                                <span itemprop="name">Главная</span>
+                            </a>
+                            <meta itemprop="position" content="1">
+                        </li>
+                        <span class="breadcrumb-separator">/</span>
+                        <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                            <a href="about.html" itemprop="item">
+                                <span itemprop="name">О компании</span>
+                            </a>
+                            <meta itemprop="position" content="2">
+                        </li>
+                        <span class="breadcrumb-separator">/</span>
+                        <li class="breadcrumb-item active" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                            <span itemprop="name">Производство</span>
+                            <meta itemprop="position" content="3">
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <!-- ========== ГЕРО-ИЗОБРАЖЕНИЕ ========== -->
+        <section class="production-hero">
+            <div class="container-custom">
+                <div class="hero-image">
+                    <img src="https://placehold.co/1200x354/104422/FFFFFF?text=Производство+комбината" alt="Производство Жешартского фанерного комбината" itemprop="image">
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== КОНТЕНТ ========== -->
+        <section class="production-content">
+            <div class="container-custom">
+                <div class="row">
+                    <!-- Левая колонка -->
+                    <div class="col-lg-8">
+                        <div class="production-header">
+                            <h1 class="page-title" itemprop="headline">Производство</h1>
+                            <p class="page-description" itemprop="description">
+                                Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания
+                            </p>
+                        </div>
+
+                        <!-- Блок 1 -->
+                        <div class="production-block">
+                            <h2 class="block-title">Заголовок</h2>
+                            <p class="block-text">
+                                Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания
+                            </p>
+
+                            <!-- Галерея -->
+                            <div class="gallery-wrapper">
+                                <div class="gallery-slider swiper-container">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img src="https://placehold.co/365x262/104422/FFFFFF?text=Производство+1" alt="Производство 1">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="https://placehold.co/365x262/657932/FFFFFF?text=Производство+2" alt="Производство 2">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="https://placehold.co/365x262/0A2716/FFFFFF?text=Производство+3" alt="Производство 3">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="https://placehold.co/365x262/327D37/FFFFFF?text=Производство+4" alt="Производство 4">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="https://placehold.co/365x262/51842A/FFFFFF?text=Производство+5" alt="Производство 5">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Навигация -->
+                                <div class="gallery-nav">
+                                    <button class="nav-btn prev" aria-label="Предыдущий">
+                                        <svg viewBox="0 0 24 24" fill="#51842A">
+                                            <path d="M14 7L9 12L14 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                    <div class="counter">
+                                        <span class="current">1</span>
+                                        <span class="total">/ 5</span>
+                                    </div>
+                                    <button class="nav-btn next" aria-label="Следующий">
+                                        <svg viewBox="0 0 24 24" fill="#51842A">
+                                            <path d="M14 7L9 12L14 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Блок 2 -->
+                        <div class="production-block">
+                            <h2 class="block-title">Заголовок</h2>
+                            <p class="block-text">
+                                Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания
+                            </p>
+                        </div>
+
+                        <!-- Блок 3 -->
+                        <div class="production-block">
+                            <h2 class="block-title">Заголовок</h2>
+                            <p class="block-text">
+                                Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания Поле текстового описания
+                            </p>
+
+                            <!-- Галерея -->
+                            <div class="gallery-wrapper">
+                                <div class="gallery-slider swiper-container">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img src="https://placehold.co/365x262/104422/FFFFFF?text=Цех+1" alt="Цех 1">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="https://placehold.co/365x262/657932/FFFFFF?text=Цех+2" alt="Цех 2">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="https://placehold.co/365x262/0A2716/FFFFFF?text=Цех+3" alt="Цех 3">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="https://placehold.co/365x262/327D37/FFFFFF?text=Цех+4" alt="Цех 4">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="https://placehold.co/365x262/51842A/FFFFFF?text=Цех+5" alt="Цех 5">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Навигация -->
+                                <div class="gallery-nav">
+                                    <button class="nav-btn prev" aria-label="Предыдущий">
+                                        <svg viewBox="0 0 24 24" fill="#51842A">
+                                            <path d="M14 7L9 12L14 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                    <div class="counter">
+                                        <span class="current">1</span>
+                                        <span class="total">/ 5</span>
+                                    </div>
+                                    <button class="nav-btn next" aria-label="Следующий">
+                                        <svg viewBox="0 0 24 24" fill="#51842A">
+                                            <path d="M14 7L9 12L14 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Правая колонка: сайдбар -->
+                    <div class="col-lg-4">
+                        <!-- Навигация -->
+                        <div class="sidebar-nav">
+                            <div class="nav-block">
+                                <div class="nav-title">О компании</div>
+                                <a href="history.html" class="nav-link-item">История компании</a>
+                                <a href="management.html" class="nav-link-item">Руководство</a>
+                                <a href="production.html" class="nav-link-item active">Производство</a>
+                                <a href="#" class="nav-link-item">Документы</a>
+                                <a href="#" class="nav-link-item">Сотрудничество</a>
+                            </div>
+                        </div>
+
+                        <!-- Контакты -->
+                        <div class="sidebar-contacts mt-3">
+                            <h4 class="contacts-title">Отдел</h4>
+                            <p class="contacts-subtitle">Консультация специалистов по вопросам</p>
+
+                            <div class="contact-label">Электронная почта</div>
+                            <div class="contact-value">+ 7 912 140 10 08</div>
+
+                            <div class="contact-label">Электронная почта</div>
+                            <div class="contact-value">sales@plyplant.com</div>
+                        </div>
+
+                        <!-- Написать нам -->
+                        <div class="sidebar-write mt-3">
+                            <h4 class="write-title">Написать нам</h4>
+                            <p class="write-subtitle">Консультация специалистов по вопросам оформления заказа</p>
+                            <button class="write-btn">Написать нам</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== ФУТЕР ========== -->
+        <footer class="footer-custom" itemscope itemtype="https://schema.org/WPFooter">
+            <div class="container-custom">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                        <div class="footer-title">О компании</div>
+                        <a href="#" class="footer-link">Вопрос ответ</a>
+                        <a href="#" class="footer-link">Каталог</a>
+                        <a href="#" class="footer-link">Новости</a>
+                        <a href="#" class="footer-link">Фотогалерея</a>
+                    </div>
+                    <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+                        <div class="footer-title">Покупателям</div>
+                        <a href="#" class="footer-link">МДФ</a>
+                        <a href="#" class="footer-link">Фанера</a>
+                        <a href="#" class="footer-link">Террасная доска</a>
+                    </div>
+                    <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+                        <div class="footer-title">Разделы</div>
+                        <a href="#" class="footer-link">Раздел 1</a>
+                        <a href="#" class="footer-link">Раздел 2</a>
+                        <a href="#" class="footer-link">Раздел 3</a>
+                        <a href="#" class="footer-link">Раздел 4</a>
+                    </div>
+                    <div class="col-lg-5 col-md-6">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="footer-title">Отдел сбыта</div>
+                                <div class="footer-phone">+7 912 140 10 08</div>
+                                <a href="mailto:zavod@zhlpk.ru" class="footer-email">zavod@zhlpk.ru</a>
+                            </div>
+                            <div class="col-6">
+                                <div class="footer-title">Отдел</div>
+                                <div class="footer-phone">+7 912 140 10 08</div>
+                                <a href="mailto:zavod@zhlpk.ru" class="footer-email">zavod@zhlpk.ru</a>
+                            </div>
+                        </div>
+                        <div class="mt-3">
+                            <div class="footer-title">Адрес</div>
+                            <div class="footer-address">169045, Россия, Республика Коми, п. Жешарт, ул. Гагарина, д. 1</div>
+                            <div class="d-flex align-items-center gap-3 mt-2 flex-wrap">
+                                <span class="footer-address">Мы в соцсетях</span>
+                                <div class="d-flex">
+                                    <span class="social-icon"></span>
+                                    <span class="social-icon"></span>
+                                    <span class="social-icon"></span>
+                                    <span class="social-icon"></span>
+                                    <span class="social-icon"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-divider d-flex flex-wrap justify-content-between align-items-center">
+                    <div class="footer-copy">© 2026. Жешартский фанерный комбинат</div>
+                    <div class="footer-copy text-center">
+                        Документы • Противодействие коррупции • Политика конфиденциальности • Карта сайта
+                    </div>
+                    <div class="footer-copy text-right">
+                        <!-- placeholder -->
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- ===== КОНЕЦ MICRODATA ===== -->
+
+    <!-- ===== jQuery ===== -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <!-- ===== Bootstrap 4 JS ===== -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+    <!-- ===== Swiper JS ===== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+
+    <!-- ===== Общие скрипты ===== -->
+    <script src="js/scripts.js"></script>
+
+    <!-- ===== Специфичные скрипты ===== -->
+    <script>
+        $(document).ready(function() {
+            // Инициализация Swiper для каждой галереи
+            $('.gallery-slider').each(function(index) {
+                var swiper = new Swiper(this, {
+                    slidesPerView: 1,
+                    spaceBetween: 0,
+                    loop: true,
+                    autoplay: {
+                        delay: 4000,
+                        disableOnInteraction: true,
+                    },
+                    speed: 600,
+                });
+
+                // Кнопки навигации для этой галереи
+                var wrapper = $(this).closest('.gallery-wrapper');
+                var prevBtn = wrapper.find('.nav-btn.prev');
+                var nextBtn = wrapper.find('.nav-btn.next');
+                var counter = wrapper.find('.counter .current');
+                var total = wrapper.find('.counter .total');
+
+                // Обновляем счётчик
+                total.text('/ ' + swiper.slides.length);
+
+                prevBtn.on('click', function() {
+                    swiper.slidePrev();
+                });
+
+                nextBtn.on('click', function() {
+                    swiper.slideNext();
+                });
+
+                swiper.on('slideChange', function() {
+                    var current = swiper.realIndex + 1;
+                    counter.text(current);
+                });
+            });
+
+            // Кнопка "Написать нам"
+            $('.write-btn').on('click', function() {
+                alert('Форма связи с отделом продаж (демонстрация)');
+            });
+
+            // Навигация в сайдбаре
+            $('.nav-link-item').on('click', function(e) {
+                e.preventDefault();
+                $('.nav-link-item').removeClass('active');
+                $(this).addClass('active');
+            });
+        });
+    </script>
+
+</body>
+</html>
