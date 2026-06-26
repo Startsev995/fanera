@@ -24,6 +24,22 @@ $(document).ready(function() {
         });
     }
 
+    // ========== СЛАЙДЕР В НОВОСТИ ==========
+    if ($('.news-swiper').length > 0) {
+        var newsSwiper = new Swiper('.news-swiper', {
+            loop: true,0
+            navigation: {
+                nextEl: '.news-next',
+                prevEl: '.news-prev',
+            },
+            speed: 800,
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            },
+        });
+    }
+
     // ========== ПЛАВНАЯ ПРОКРУТКА К ЯКОРЯМ ==========
     $('a[href^="#"]').on('click', function(event) {
         var target = $(this.getAttribute('href'));

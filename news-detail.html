@@ -202,9 +202,9 @@
         <!-- ========== КОНТЕНТ НОВОСТИ ========== -->
         <section class="news-content" itemprop="articleBody">
             <div class="container-custom">
-                <div class="row">
+                <div class="row justify-content-between">
                     <!-- Левая колонка: текст -->
-                    <div class="col-lg-8">
+                    <div class="col-lg-7">
                         <div class="news-text">
                             <p>
                                 На фанерном комбинате прошла насыщенная встреча генерального директора Сергея Андреяхина с ветеранами завода. 
@@ -242,11 +242,29 @@
                     </div>
                 </div>
 
-                <!-- Нижнее изображение (на всю ширину) -->
-                <div class="row mt-4">
-                    <div class="col-12">
-                        <div class="news-main-image">
-                            <img src="https://placehold.co/680x436/104422/FFFFFF?text=Фото+с+встречи" alt="Фото с встречи директора комбината с ветеранами завода">
+                <!-- ========================================
+                     СЛАЙДЕР В НОВОСТИ
+                ======================================== -->
+                <div class="news-slider-wrapper col-lg-7">
+                    <div class="swiper-container news-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="./image/na_sklade_pilovochnika 1.png" alt="Фото с встречи 1">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./image/Rectangle-583.png" alt="Фото с встречи 2">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./image/na_sklade_pilovochnika 1.png" alt="Фото с встречи 3">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./image/Rectangle-583.png" alt="Фото с встречи 4">
+                            </div>
+                        </div>
+                        <!-- Кнопки навигации -->
+                        <div class="swiper-button">
+                            <div class="swiper-button-next news-next"></div>
+                            <div class="swiper-button-prev news-prev"></div>
                         </div>
                     </div>
                 </div>

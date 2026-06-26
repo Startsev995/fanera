@@ -4,7 +4,7 @@
 
 /* Заголовок страницы */
 .press-header {
-    padding: 65px 0 40px;
+    padding: 0 0 40px;
 }
 
 .press-header .page-title {
@@ -72,6 +72,7 @@
     overflow: hidden;
     border-top-left-radius: var(--radius-md);
     border-top-right-radius: var(--radius-md);
+    position: relative;
 }
 
 .card-news .card-image img {
@@ -90,7 +91,7 @@
 }
 
 .card-news .card-tag {
-    display: inline-block;
+    display: block;
     padding: 10px;
     background: var(--color-white);
     border-radius: 6px;
@@ -100,6 +101,10 @@
     letter-spacing: 0.14px;
     color: #8D8D8D;
     margin-bottom: 11px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
 }
 
 .card-news .card-title {
@@ -123,6 +128,7 @@
 .pagination-custom {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 9px;
     margin-top: 40px;
 }

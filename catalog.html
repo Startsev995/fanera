@@ -78,10 +78,10 @@
     }
     </script>
 
-    <!-- ===== Bootstrap 4 ===== -->
+    <!-- ===== Bootstrap 4 CSS ===== -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-    <!-- ===== Swiper ===== -->
+    <!-- ===== Swiper CSS ===== -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css">
 
     <!-- ===== Общие стили ===== -->
@@ -92,176 +92,163 @@
 </head>
 <body>
 
-    <!-- ========================================
-         MICRODATA: ОРГАНИЗАЦИЯ
-    ======================================== -->
-    <div itemscope itemtype="https://schema.org/Organization">
-        <meta itemprop="name" content="Жешартский фанерный комбинат">
-        <meta itemprop="url" content="https://example.com">
-        <meta itemprop="telephone" content="+7-912-140-10-08">
-        <meta itemprop="address" content="169045, Россия, Республика Коми, п. Жешарт, ул. Гагарина, д. 1">
-    </div>
-
-    <!-- ========================================
-         СТРАНИЦА С MICRODATA
-    ======================================== -->
     <div itemscope itemtype="https://schema.org/CollectionPage">
 
-        <!-- ========== ШАПКА ========== -->
+        <!-- ========================================
+             ШАПКА
+        ======================================== -->
         <header class="header-custom">
             <div class="container-custom">
                 <div class="row align-items-center">
-                    <div class="col-lg-3 col-md-4">
+                    <div class="col-lg-4 col-md-5">
                         <div class="logo-header">
                             <div class="logo-squares">
-                                <div class="sq"></div>
-                                <div class="sq"></div>
-                                <div class="sq"></div>
-                                <div class="sq"></div>
-                                <div class="sq-overlay"></div>
+                                <a href="/">
+                                    <img src="./svg/logo-header.svg">
+                                </a>
                             </div>
-                            <div class="logo-text" itemprop="name">Жешартский фанерный комбинат</div>
+                            <div class="logo-text">Жешартский фанерный комбинат</div>
                         </div>
                     </div>
-                    <div class="col-lg-9 col-md-8 text-md-right mt-3 mt-md-0">
-                        <div class="header-phone" itemprop="telephone">+7 (8212) 63-02-18</div>
-                        <div class="header-address" itemprop="address">Республика Коми, п. Жешарт, ул. Гагарина, д. 1</div>
+                    <div class="col-lg-8 col-md-7 text-md-right mt-3 mt-md-0">
+                        <a href="tel:+7 (8212) 63-02-18" class="header-phone">+7 (8212) 63-02-18</a>
+                        <div class="header-address">Республика Коми, п. Жешарт, ул. Гагарина, д. 1</div>
                     </div>
                 </div>
             </div>
         </header>
 
-        <!-- ========== НАВИГАЦИЯ ========== -->
+        <!-- ========================================
+             НАВИГАЦИЯ
+        ======================================== -->
         <nav class="nav-catalog">
             <div class="container-custom">
                 <ul class="nav">
                     <li class="nav-item">
-                        <a class="nav-link-custom" href="index.html">О компании</a>
+                        <a class="nav-link-custom" href="about.html">О компании</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link-custom active" href="catalog.html">Каталог возможностей</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link-custom" href="#">Пресс-служба</a>
+                        <a class="nav-link-custom" href="press.html">Пресс-служба</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link-custom" href="#">Контакты</a>
+                        <a class="nav-link-custom" href="contacts.html">Контакты</a>
                     </li>
                 </ul>
             </div>
         </nav>
 
-        <!-- ========== ХЛЕБНЫЕ КРОШКИ ========== -->
-        <div class="catalog-breadcrumbs" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <!-- ========================================
+             ХЛЕБНЫЕ КРОШКИ
+        ======================================== -->
+        <div class="catalog-breadcrumbs">
             <div class="container-custom">
                 <nav aria-label="Хлебные крошки">
                     <ol class="breadcrumb-custom">
-                        <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                            <a href="index.html" itemprop="item">
-                                <span itemprop="name">Главная</span>
-                            </a>
-                            <meta itemprop="position" content="1">
+                        <li class="breadcrumb-item">
+                            <a href="index.html">Главная</a>
                         </li>
                         <span class="breadcrumb-separator">/</span>
-                        <li class="breadcrumb-item active" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                            <span itemprop="name">Каталог возможностей</span>
-                            <meta itemprop="position" content="2">
-                        </li>
+                        <li class="breadcrumb-item active">Каталог возможностей</li>
                     </ol>
                 </nav>
             </div>
         </div>
 
-        <!-- ========== ЗАГОЛОВОК СТРАНИЦЫ ========== -->
+        <!-- ========================================
+             ЗАГОЛОВОК
+        ======================================== -->
         <section class="catalog-header">
             <div class="container-custom">
-                <h1 class="page-title" itemprop="headline">Каталог возможностей</h1>
+                <h1 class="page-title">Каталог возможностей</h1>
             </div>
         </section>
 
-        <!-- ========== СЕТКА КАРТОЧЕК ========== -->
-        <section class="catalog-grid" itemprop="mainEntity" itemscope itemtype="https://schema.org/ItemList">
+        <!-- ========================================
+             СЕТКА КАРТОЧЕК
+        ======================================== -->
+        <section class="catalog-grid">
             <div class="container-custom">
                 <div class="row">
                     <!-- Карточка 1: Фанера ФК -->
-                    <div class="col-lg-3 col-md-6 card-wrapper" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                        <meta itemprop="position" content="1">
-                        <div class="card-catalog" itemscope itemtype="https://schema.org/Product">
+                    <a href="" class="col-lg-3 col-md-6 mb-4">
+                        <div class="card-catalog">
                             <div class="card-image">
-                                <img src="https://placehold.co/238x143/F5F5F5/1A1B22?text=ФК" alt="Фанера ФК" itemprop="image">
+                                <img src="./image/product-1.png" alt="Фанера ФК">
                             </div>
                             <div class="card-body">
-                                <div class="card-title" itemprop="name">Фанера ФК</div>
-                                <div class="card-subtitle" itemprop="description">Краткое описание</div>
+                                <div class="card-title">Фанера ФК</div>
+                                <div class="card-subtitle">Краткое описание</div>
                             </div>
                             <div class="mt-3">
-                                <a href="#" class="btn-detail primary">Подробнее</a>
+                                <span href="product.html" class="btn-detail">Подробнее</span>
                             </div>
                         </div>
-                    </div>
+                    </a>
 
                     <!-- Карточка 2: Фанера FSF -->
-                    <div class="col-lg-3 col-md-6 card-wrapper" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                        <meta itemprop="position" content="2">
-                        <div class="card-catalog" itemscope itemtype="https://schema.org/Product">
+                    <a href="" class="col-lg-3 col-md-6 mb-4">
+                        <div class="card-catalog">
                             <div class="card-image">
-                                <img src="https://placehold.co/238x143/F5F5F5/1A1B22?text=FSF" alt="Фанера FSF" itemprop="image">
+                                <img src="./image/product-1.png" alt="Фанера FSF">
                             </div>
                             <div class="card-body">
-                                <div class="card-title" itemprop="name">Фанера FSF</div>
-                                <div class="card-subtitle" itemprop="description">Краткое описание</div>
+                                <div class="card-title">Фанера FSF</div>
+                                <div class="card-subtitle">Краткое описание</div>
                             </div>
                             <div class="mt-3">
-                                <a href="#" class="btn-detail">Подробнее</a>
+                                <span href="product.html" class="btn-detail">Подробнее</span>
                             </div>
                         </div>
-                    </div>
+                    </a>
 
                     <!-- Карточка 3: Фанера ламинированная -->
-                    <div class="col-lg-3 col-md-6 card-wrapper" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                        <meta itemprop="position" content="3">
-                        <div class="card-catalog" itemscope itemtype="https://schema.org/Product">
+                    <a href="" class="col-lg-3 col-md-6 mb-4">
+                        <div class="card-catalog">
                             <div class="card-image">
-                                <img src="https://placehold.co/238x143/F5F5F5/1A1B22?text=Ламинат" alt="Фанера ламинированная" itemprop="image">
+                                <img src="./image/product-2.png" alt="Фанера ламинированная">
                             </div>
                             <div class="card-body">
-                                <div class="card-title" itemprop="name">Фанера ламинированная</div>
-                                <div class="card-subtitle" itemprop="description">Краткое описание</div>
+                                <div class="card-title">Фанера ламинированная</div>
+                                <div class="card-subtitle">Краткое описание</div>
                             </div>
                             <div class="mt-3">
-                                <a href="#" class="btn-detail">Подробнее</a>
+                                <span href="product.html" class="btn-detail">Подробнее</span>
                             </div>
                         </div>
-                    </div>
+                    </a>
 
                     <!-- Карточка 4: Террасная доска -->
-                    <div class="col-lg-3 col-md-6 card-wrapper" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                        <meta itemprop="position" content="4">
-                        <div class="card-catalog" itemscope itemtype="https://schema.org/Product">
+                    <a href="" class="col-lg-3 col-md-6 mb-4">
+                        <div class="card-catalog">
                             <div class="card-image">
-                                <img src="https://placehold.co/238x143/F5F5F5/1A1B22?text=Террасная" alt="Террасная доска" itemprop="image">
+                                <img src="./image/product-3.png" alt="Террасная доска">
                             </div>
                             <div class="card-body">
-                                <div class="card-title" itemprop="name">Террасная доска</div>
-                                <div class="card-subtitle" itemprop="description">Пустотелая, полнотелая</div>
+                                <div class="card-title">Террасная доска</div>
+                                <div class="card-subtitle">Пустотелая, полнотелая</div>
                             </div>
                             <div class="mt-3">
-                                <a href="#" class="btn-detail">Подробнее</a>
+                                <span href="product.html" class="btn-detail">Подробнее</span>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- ========== БАННЕР С ОПИСАНИЕМ ========== -->
+        <!-- ========================================
+             БАННЕР С ОПИСАНИЕМ
+        ======================================== -->
         <section class="catalog-description">
             <div class="container-custom">
-                <div class="catalog-banner" itemscope itemtype="https://schema.org/Article">
-                    <h2 class="banner-title" itemprop="headline">
+                <div class="catalog-banner">
+                    <h2 class="banner-title">
                         Березовая фанера высокого качества от Жешартского фанерного комбината
                     </h2>
-                    <div class="banner-text" itemprop="articleBody">
+                    <div class="banner-text">
                         Березовая фанера Жешартского фанерного комбината — это высококачественный древесный материал, изготовленный из отборного березового шпона с использованием современных технологий производства и строгого контроля качества. Благодаря высокой прочности, стабильности геометрии и отличным эксплуатационным характеристикам березовая фанера широко применяется в строительстве, мебельной промышленности, транспортном машиностроении, производстве упаковки и других отраслях. Для изготовления продукции используется качественное сырье из северных регионов России, что обеспечивает высокую плотность древесины, однородную структуру и долговечность готового материала.
                         <br><br>
                         Березовая фанера отличается высокой устойчивостью к механическим нагрузкам, удобством обработки и экологической безопасностью. Многослойная конструкция из перекрестно склеенного шпона обеспечивает материалу прочность на изгиб, устойчивость к деформации и длительный срок службы даже при интенсивной эксплуатации. Продукция выпускается в различных форматах и толщинах, что позволяет подобрать оптимальное решение для строительных, производственных и дизайнерских задач.
@@ -270,51 +257,59 @@
             </div>
         </section>
 
-        <!-- ========== ФУТЕР ========== -->
+        <!-- ========================================
+             ФУТЕР
+        ======================================== -->
         <footer class="footer-custom" itemscope itemtype="https://schema.org/WPFooter">
             <div class="container-custom">
-                <div class="row">
-                    <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-                        <div class="footer-title">О компании</div>
-                        <a href="#" class="footer-link">Вопрос ответ</a>
-                        <a href="#" class="footer-link">Каталог</a>
-                        <a href="#" class="footer-link">Новости</a>
-                        <a href="#" class="footer-link">Фотогалерея</a>
-                    </div>
-                    <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
-                        <div class="footer-title">Покупателям</div>
-                        <a href="#" class="footer-link">МДФ</a>
-                        <a href="#" class="footer-link">Фанера</a>
-                        <a href="#" class="footer-link">Террасная доска</a>
-                    </div>
-                    <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
-                        <div class="footer-title">Разделы</div>
-                        <a href="#" class="footer-link">Раздел 1</a>
-                        <a href="#" class="footer-link">Раздел 2</a>
-                        <a href="#" class="footer-link">Раздел 3</a>
-                        <a href="#" class="footer-link">Раздел 4</a>
-                    </div>
-                    <div class="col-lg-5 col-md-6">
-                        <div class="row">
-                            <div class="col-6">
-                                <div class="footer-title">Отдел сбыта</div>
-                                <div class="footer-phone">+7 912 140 10 08</div>
-                                <a href="mailto:zavod@zhlpk.ru" class="footer-email">zavod@zhlpk.ru</a>
-                            </div>
-                            <div class="col-6">
-                                <div class="footer-title">Отдел</div>
-                                <div class="footer-phone">+7 912 140 10 08</div>
-                                <a href="mailto:zavod@zhlpk.ru" class="footer-email">zavod@zhlpk.ru</a>
-                            </div>
+                <div class="footer-top">
+                    <div class="footer-menu">
+                        <div class="footer-col">
+                            <div class="footer-title">О компании</div>
+                            <a href="#" class="footer-link">Вопрос ответ</a>
+                            <a href="#" class="footer-link">Каталог</a>
+                            <a href="#" class="footer-link">Новости</a>
+                            <a href="#" class="footer-link">Фотогалерея</a>
                         </div>
-                        <div class="mt-3">
+
+                        <div class="footer-col">
+                            <div class="footer-title">Покупателям</div>
+                            <a href="#" class="footer-link">МДФ</a>
+                            <a href="#" class="footer-link">Фанера</a>
+                            <a href="#" class="footer-link">Террасная доска</a>
+                            <a href="#" class="footer-link">Террасная доска</a>
+                        </div>
+
+                        <div class="footer-col">
+                            <div class="footer-title">Разделы</div>
+                            <a href="#" class="footer-link">Раздел 1</a>
+                            <a href="#" class="footer-link">Раздел 2</a>
+                            <a href="#" class="footer-link">Раздел 3</a>
+                            <a href="#" class="footer-link">Раздел 4</a>
+                        </div>
+                    </div>
+
+                    <div class="footer-contacts">
+                        <div class="footer-contact-col">
+                            <div class="footer-title">Отдел сбыта</div>
+                            <div class="footer-phone">+7 912 140 10 08</div>
+                            <a href="mailto:zavod@zhlpk.ru" class="footer-email">zavod@zhlpk.ru</a>
+                        </div>
+
+                        <div class="footer-contact-col">
+                            <div class="footer-title">Отдел</div>
+                            <div class="footer-phone">+7 912 140 10 08</div>
+                            <a href="mailto:zavod@zhlpk.ru" class="footer-email">zavod@zhlpk.ru</a>
+                        </div>
+
+                        <div class="footer-location">
                             <div class="footer-title">Адрес</div>
                             <div class="footer-address">169045, Россия, Республика Коми, п. Жешарт, ул. Гагарина, д. 1</div>
-                            <div class="d-flex align-items-center gap-3 mt-2 flex-wrap">
-                                <span class="footer-address">Мы в соцсетях</span>
-                                <div class="d-flex">
-                                    <span class="social-icon"></span>
-                                    <span class="social-icon"></span>
+                            <div class="footer-social">
+                                <span class="footer-social-label">Мы в соцсетях</span>
+                                <div class="footer-social-icons">
+                                    <span class="social-icon social-icon-vk"></span>
+                                    <span class="social-icon social-icon-tg"></span>
                                     <span class="social-icon"></span>
                                     <span class="social-icon"></span>
                                     <span class="social-icon"></span>
@@ -324,20 +319,14 @@
                     </div>
                 </div>
 
-                <div class="footer-divider d-flex flex-wrap justify-content-between align-items-center">
-                    <div class="footer-copy">© 2026. Жешартский фанерный комбинат</div>
-                    <div class="footer-copy text-center">
-                        Документы • Противодействие коррупции • Политика конфиденциальности • Карта сайта
-                    </div>
-                    <div class="footer-copy text-right">
-                        <!-- placeholder -->
-                    </div>
+                <div class="footer-bottom">
+                    <span class="footer-copy">© 2026. Жешартский фанерный комбинат</span>
+                    <span class="footer-copy footer-links">Документы • Противодействие коррупции • Политика конфиденциальности • Карта сайта</span>
                 </div>
             </div>
         </footer>
 
     </div>
-    <!-- ===== КОНЕЦ MICRODATA ===== -->
 
     <!-- ===== jQuery ===== -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
