@@ -27,7 +27,6 @@ $(document).ready(function() {
     // ========== СЛАЙДЕР В НОВОСТИ ==========
     if ($('.news-swiper').length > 0) {
         var newsSwiper = new Swiper('.news-swiper', {
-            loop: true,0
             navigation: {
                 nextEl: '.news-next',
                 prevEl: '.news-prev',
@@ -39,6 +38,111 @@ $(document).ready(function() {
             },
         });
     }
+
+    // ========== СЛАЙДЕР В СТАТЬИ ==========
+    if ($('.article-swiper').length > 0) {
+        var newsSwiper = new Swiper('.article-swiper', {
+            navigation: {
+                nextEl: '.article-next',
+                prevEl: '.article-prev',
+            },
+            speed: 800,
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            },
+        });
+    }
+
+    // Инициализация Swiper для каждой галереи
+    if ($('.gallery-slider').length > 0) {
+        $('.gallery-slider').each(function(index) {
+            var swiper = new Swiper(this, {
+                slidesPerView: 2,
+                spaceBetween: 50,
+                loop: false,
+                autoplay: false,
+                speed: 600,
+                breakpoints: {
+                    768: {
+                        slidesPerView: 1,
+                        spaceBetween: 0,
+                    }
+                }
+            });
+
+            var wrapper = $(this).closest('.gallery-wrapper');
+            var prevBtn = wrapper.find('.nav-btn.prev');
+            var nextBtn = wrapper.find('.nav-btn.next');
+            var counter = wrapper.find('.counter .current');
+            var total = wrapper.find('.counter .total');
+
+            var totalSlides = swiper.slides.length;
+            var slidesPerView = 2;
+            
+            // Определяем количество слайдов на экране
+            function getSlidesPerView() {
+                return window.innerWidth < 768 ? 1 : 2;
+            }
+
+            total.text('/ ' + totalSlides);
+
+            function updateCounter() {
+                var spv = getSlidesPerView();
+                var currentIndex = swiper.activeIndex;
+                var lastVisible = currentIndex + spv;
+                
+                if (lastVisible > totalSlides) {
+                    lastVisible = totalSlides;
+                }
+                if (currentIndex === 0) {
+                    lastVisible = spv;
+                }
+                
+                counter.text(lastVisible);
+            }
+
+            // Обработчики кнопок
+            prevBtn.on('click', function() {
+                var spv = getSlidesPerView();
+                var newIndex = swiper.activeIndex - spv;
+                if (newIndex < 0) newIndex = 0;
+                swiper.slideTo(newIndex);
+                setTimeout(updateCounter, 100);
+            });
+
+            nextBtn.on('click', function() {
+                var spv = getSlidesPerView();
+                var newIndex = swiper.activeIndex + spv;
+                if (newIndex >= totalSlides) newIndex = totalSlides - spv;
+                if (newIndex < 0) newIndex = 0;
+                swiper.slideTo(newIndex);
+                setTimeout(updateCounter, 100);
+            });
+
+            swiper.on('slideChange', function() {
+                updateCounter();
+            });
+
+            $(window).on('resize', function() {
+                setTimeout(updateCounter, 200);
+            });
+
+            setTimeout(updateCounter, 200);
+        });
+    }
+
+    // Кнопка "Написать нам"
+    $('.write-btn').on('click', function() {
+        alert('Форма связи с отделом продаж (демонстрация)');
+    });
+
+    // Навигация в сайдбаре
+    $('.nav-link-item').on('click', function(e) {
+        e.preventDefault();
+        $('.nav-link-item').removeClass('active');
+        $(this).addClass('active');
+    });
 
     // ========== ПЛАВНАЯ ПРОКРУТКА К ЯКОРЯМ ==========
     $('a[href^="#"]').on('click', function(event) {
@@ -135,5 +239,54 @@ $(document).ready(function() {
             scrollBtn.fadeOut();
         }
     });
+
+    // Переключение разделов документов (аккордеон)
+    $('.doc-section-header').on('click', function() {
+        var section = $(this).closest('.doc-section');
+        var isActive = section.hasClass('active');
+
+        // Закрываем все
+        $('.doc-section').removeClass('active');
+
+        // Если не был активен - открываем
+        if (!isActive) {
+            section.addClass('active');
+        }
+    });
+
+    // По умолчанию открыт первый раздел
+    $('.doc-section:first').addClass('active');
+
+    // Кнопка "Написать нам"
+    $('.write-btn').on('click', function() {
+        alert('Форма связи с отделом продаж (демонстрация)');
+    });
+
+    // Скачать документ
+    $('.doc-download').on('click', function(e) {
+        e.preventDefault();
+        alert('Скачивание документа (демонстрация)');
+    });
+
+    // Переключение отделов (аккордеон)
+            $('.department-item .department-header').on('click', function() {
+                var item = $(this).closest('.department-item');
+                var isActive = item.hasClass('active');
+
+                if (!isActive) {
+                    $('.department-item').removeClass('active');
+                    item.addClass('active');
+                } else {
+                    item.removeClass('active');
+                }
+            });
+
+            // Кнопка "Написать нам"
+            $('.write-btn').on('click', function() {
+                alert('Форма связи с отделом продаж (демонстрация)');
+            });
+
+            // По умолчанию открыт первый отдел
+            $('.department-item:first').addClass('active');
 
 });

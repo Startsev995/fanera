@@ -50,6 +50,7 @@
 
 /* Карточка сотрудника */
 .employee-card {
+    display: block;
     background: #F4F4F4;
     border-radius: var(--radius-md);
     padding: 30px 20px 30px 28px;
@@ -122,17 +123,18 @@
     transition: var(--transition-default);
 }
 
-.employee-card .employee-arrow:hover {
+.employee-card:hover .employee-arrow {
     background: var(--color-accent);
 }
 
-.employee-card .employee-arrow:hover svg {
-    fill: var(--color-white);
+.employee-card .employee-arrow .nav-arrow {
+    color: var(--color-text);
+    font-size: 18px;
+    transition: var(--transition-default);
 }
 
-.employee-card .employee-arrow svg {
-    width: 20px;
-    height: 20px;
+.employee-card:hover .employee-arrow .nav-arrow {
+    color: #fff;
 }
 
 /* ============================================

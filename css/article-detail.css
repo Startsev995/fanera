@@ -1,5 +1,5 @@
 /* ============================================
-   ДЕТАЛЬНАЯ СТРАНИЦА СТАТЬИ
+   СТАТЬЯ (ДЕТАЛЬНАЯ СТРАНИЦА)
    ============================================ */
 
 /* Хлебные крошки */
@@ -8,7 +8,7 @@
     padding-bottom: 28px;
 }
 
-/* Заголовок страницы */
+/* Заголовок */
 .article-header {
     padding: 10px 0 30px;
 }
@@ -28,10 +28,9 @@
     align-items: center;
     gap: 8px;
     padding: 10px 16px;
-    background: var(--color-gray-light);
+    background: #F5F5F5;
     border-radius: 34px;
     margin-top: 10px;
-    margin-bottom: 30px;
     width: fit-content;
 }
 
@@ -41,11 +40,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.article-meta .meta-icon svg {
-    width: 20px;
-    height: 20px;
 }
 
 .article-meta .meta-text {
@@ -68,7 +62,6 @@
     border: none;
     cursor: pointer;
     transition: var(--transition-default);
-    margin-left: auto;
 }
 
 .share-btn:hover {
@@ -81,73 +74,54 @@
     height: 25px;
 }
 
-/* Контент статьи */
+/* Контент */
 .article-content {
     padding-bottom: 60px;
 }
 
-.article-content .article-text {
+.article-text {
     font-family: var(--font-primary);
     font-size: 16px;
     font-weight: 400;
     line-height: 22px;
     color: #1F1F1F;
-    max-width: 680px;
 }
 
-.article-content .article-text p {
+.article-text p {
     margin-bottom: 18px;
 }
 
-.article-content .article-text strong {
+.article-text strong {
     font-weight: 700;
 }
 
 /* Заголовки разделов */
-.article-content .section-title {
+.section-title {
     font-family: var(--font-primary);
     font-size: 36px;
     font-weight: 600;
     line-height: 32px;
-    color: rgba(0, 0, 0, 0.2);
+    color: var(--color-text);
     margin-top: 48px;
     margin-bottom: 20px;
 }
 
-.article-content .section-title:first-of-type {
-    margin-top: 0;
-}
-
-/* Изображения */
-.article-main-image {
-    border-radius: var(--radius-md);
+/* Изображение с кнопкой Play */
+.article-image-main {
+    position: relative;
+    border-radius: 16px;
     overflow: hidden;
-    width: 100%;
+    margin: 30px 0;
     max-width: 680px;
 }
 
-.article-main-image img {
+.article-image-main img {
     width: 100%;
     height: auto;
-    object-fit: cover;
+    display: block;
 }
 
-.article-image-full {
-    border-radius: var(--radius-md);
-    overflow: hidden;
-    width: 100%;
-    max-width: 680px;
-    margin-top: 30px;
-}
-
-.article-image-full img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-/* Плей-кнопка на изображении */
-.play-button {
+.article-image-main .play-button {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -163,35 +137,190 @@
     z-index: 2;
 }
 
-.play-button:hover {
+.article-image-main .play-button:hover {
     transform: translate(-50%, -50%) scale(1.1);
     box-shadow: 0 8px 30px rgba(81, 132, 42, 0.4);
 }
 
-.play-button svg {
+.article-image-main .play-button svg {
     width: 28px;
     height: 28px;
 }
 
-/* Боковая колонка */
-.article-sidebar .sidebar-image {
-    border-radius: var(--radius-md);
+/* Слайдер в статье */
+.article-slider-wrapper {
+    position: relative;
+    border-radius: 16px;
     overflow: hidden;
-    margin-bottom: 24px;
+    margin-top: 30px;
+    max-width: 680px;
 }
 
-.article-sidebar .sidebar-image img {
+.article-swiper {
     width: 100%;
-    height: auto;
+    height: 436px;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.article-swiper .swiper-slide img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
-/* Баннер в боковой колонке */
+.article-pagination {
+    position: absolute;
+    bottom: 30px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    display: flex;
+    gap: 12px;
+    width: auto !important;
+    z-index: 10;
+}
+
+.article-pagination .swiper-pagination-bullet {
+    width: 40px;
+    height: 4px;
+    border-radius: 2px;
+    background: rgba(255, 255, 255, 0.4);
+    opacity: 1;
+    transition: var(--transition-default);
+}
+
+.article-pagination .swiper-pagination-bullet-active {
+    background: var(--color-white);
+    opacity: 1;
+}
+
+/* Стрелки слайдера */
+.article-swiper .swiper-button {
+    position: absolute;
+    bottom: 22px;
+    right: 35px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    z-index: 10;
+    padding: 16px 16px 12px 16px;
+    justify-content: center;
+    border-radius: 8px;
+    border: 2px solid rgba(255, 255, 255, 0.60);
+}
+
+.swiper-button::after {
+    display: block;
+    content: '|';
+    position: absolute;
+    top: 11px;
+    left: 41px;
+    color: var(--color-white);
+    opacity: 0.6;
+}
+
+.article-next,
+.article-prev {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    margin: 0 !important;
+    width: 20px;
+    height: 20px;
+    transition: opacity .3s;
+    cursor: pointer;
+}
+
+.article-next::after,
+.article-prev::after {
+    width: 20px;
+    height: 20px;
+    display: block;
+    content: url(../svg/arrow-slider.svg);
+    font-size: 16px;
+    color: var(--color-white);
+    font-weight: 700;
+}
+
+.article-prev::after {
+    transform: rotate(180deg);
+    font-size: 23px;
+}
+
+.article-next.swiper-button-disabled,
+.article-prev.swiper-button-disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* ============================================
+   АДАПТИВ
+   ============================================ */
+@media (max-width: 992px) {
+    .article-next,
+    .article-prev {
+        width: 38px;
+        height: 38px;
+    }
+
+    .article-next::after,
+    .article-prev::after {
+        font-size: 13px;
+    }
+
+    .article-slider-wrapper .swiper-button {
+        bottom: 16px;
+        right: 20px;
+        gap: 8px;
+    }
+}
+
+@media (max-width: 768px) {
+    .article-slider-wrapper .swiper-button {
+        bottom: 12px;
+        right: 16px;
+        gap: 6px;
+    }
+
+    .article-next,
+    .article-prev {
+        width: 32px;
+        height: 32px;
+    }
+
+    .article-next::after,
+    .article-prev::after {
+        font-size: 11px;
+    }
+}
+
+/* Правая колонка: сайдбар */
+
+/* Изображение */
+
+.sidebar-image img {
+    border-radius: 16px;
+}
+
+/* Баннер в сайдбаре */
 .sidebar-banner {
     background: var(--color-primary);
-    border-radius: var(--radius-md);
+    border-radius: 16px;
     padding: 29px 24px 24px;
-    min-height: 290px;
+}
+
+.sidebar-banner .banner-image {
+    margin-bottom: 20px;
+}
+
+.sidebar-banner .banner-image img {
+    width: 100%;
+    max-width: 310px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
 }
 
 .sidebar-banner .banner-title {
@@ -212,17 +341,6 @@
     margin-bottom: 20px;
 }
 
-.sidebar-banner .banner-image {
-    margin-bottom: 20px;
-}
-
-.sidebar-banner .banner-image img {
-    width: 100%;
-    max-width: 310px;
-    height: auto;
-    margin: 0 auto;
-}
-
 .sidebar-banner .banner-btn {
     display: inline-flex;
     align-items: center;
@@ -239,7 +357,6 @@
     cursor: pointer;
     transition: var(--transition-default);
     width: 100%;
-    max-width: 232px;
 }
 
 .sidebar-banner .banner-btn:hover {
@@ -248,32 +365,34 @@
 }
 
 /* Блок "Отдел продаж" */
-.sales-contact {
+.sidebar-contacts {
     background: rgba(31, 31, 31, 0.05);
-    border-radius: var(--radius-md);
-    padding: 32px 24px;
+    border-radius: 16px;
+    padding: 21px 20px 24px;
     margin-top: 24px;
 }
 
-.sales-contact .contact-title {
+.sidebar-contacts .contacts-title {
     font-family: var(--font-primary);
     font-size: 26px;
     font-weight: 600;
     line-height: 32px;
-    color: rgba(0, 0, 0, 0.2);
+    color: var(--text-color);
     margin-bottom: 8px;
 }
 
-.sales-contact .contact-subtitle {
+.sidebar-contacts .contacts-subtitle {
     font-family: var(--font-primary);
     font-size: 16px;
     font-weight: 400;
     line-height: 22px;
     color: rgba(31, 31, 31, 0.8);
-    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #D4D4D4;
+    margin-bottom: 10px;
 }
 
-.sales-contact .contact-label {
+.sidebar-contacts .contact-label {
     font-family: var(--font-primary);
     font-size: 12px;
     font-weight: 400;
@@ -282,20 +401,17 @@
     margin-bottom: 4px;
 }
 
-.sales-contact .contact-value {
+.sidebar-contacts .contact-value {
+    display: block;
     font-family: var(--font-primary);
     font-size: 22px;
     font-weight: 500;
     line-height: 28px;
     color: #1F1F1F;
-    margin-bottom: 16px;
+    margin: 16px 0;
 }
 
-.sales-contact .contact-value:last-of-type {
-    margin-bottom: 0;
-}
-
-.sales-contact .contact-btn {
+.sidebar-contacts .contact-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -311,11 +427,10 @@
     cursor: pointer;
     transition: var(--transition-default);
     width: 100%;
-    max-width: 431px;
-    margin-top: 16px;
+    margin-top: 20px;
 }
 
-.sales-contact .contact-btn:hover {
+.sidebar-contacts .contact-btn:hover {
     background: #2a6b2f;
     transform: translateY(-2px);
     box-shadow: 0 4px 15px rgba(50, 125, 55, 0.3);
@@ -331,24 +446,20 @@
         max-width: 100%;
     }
 
-    .article-content .article-text {
+    .article-image-main {
         max-width: 100%;
     }
 
-    .article-main-image {
+    .article-slider-wrapper {
         max-width: 100%;
     }
 
-    .article-image-full {
-        max-width: 100%;
+    .article-swiper {
+        height: 350px;
     }
 }
 
 @media (max-width: 992px) {
-    .article-header {
-        padding: 10px 0 20px;
-    }
-
     .article-header .article-title {
         font-size: 28px;
         line-height: 38px;
@@ -358,20 +469,33 @@
         margin-top: 40px;
     }
 
-    .sidebar-banner {
-        min-height: auto;
+    .article-swiper {
+        height: 300px;
     }
 
-    .sidebar-banner .banner-btn {
-        max-width: 100%;
+    .article-next,
+    .article-prev {
+        width: 38px;
+        height: 38px;
     }
 
-    .sales-contact .contact-btn {
-        max-width: 100%;
+    .article-next::after,
+    .article-prev::after {
+        font-size: 13px;
+    }
+
+    .article-swiper .swiper-button {
+        bottom: 16px;
+        right: 20px;
+        gap: 8px;
+    }
+
+    .article-pagination .swiper-pagination-bullet {
+        width: 30px;
+        height: 3px;
     }
 
     .share-btn {
-        margin-left: 0;
         margin-top: 10px;
     }
 }
@@ -392,15 +516,55 @@
         font-size: 14px;
     }
 
-    .article-content .article-text {
+    .article-text {
         font-size: 15px;
         line-height: 22px;
     }
 
-    .article-content .section-title {
+    .section-title {
         font-size: 28px;
         line-height: 28px;
         margin-top: 32px;
+    }
+
+    .article-swiper {
+        height: 250px;
+    }
+
+    .article-pagination {
+        bottom: 16px !important;
+        gap: 8px;
+    }
+
+    .article-pagination .swiper-pagination-bullet {
+        width: 24px;
+        height: 3px;
+    }
+
+    .article-swiper .swiper-button {
+        bottom: 12px;
+        right: 16px;
+        gap: 6px;
+    }
+
+    .article-next,
+    .article-prev {
+        width: 32px;
+        height: 32px;
+    }
+
+    .article-next::after,
+    .article-prev::after {
+        font-size: 11px;
+    }
+
+    .article-image-main .play-button {
+        padding: 24px;
+    }
+
+    .article-image-main .play-button svg {
+        width: 22px;
+        height: 22px;
     }
 
     .sidebar-banner .banner-title {
@@ -412,12 +576,12 @@
         max-width: 100%;
     }
 
-    .sales-contact .contact-title {
+    .sidebar-contacts .contacts-title {
         font-size: 22px;
         line-height: 28px;
     }
 
-    .sales-contact .contact-value {
+    .sidebar-contacts .contact-value {
         font-size: 18px;
         line-height: 24px;
     }
@@ -431,13 +595,91 @@
         width: 20px;
         height: 20px;
     }
+}
 
-    .play-button {
-        padding: 24px;
+/* ============================================
+   СПИСКИ В СТАТЬЕ
+   ============================================ */
+.styled-list {
+    padding-left: 0;
+    margin: 16px 0;
+    list-style: none;
+}
+
+/* Нумерованный список (этапы) */
+ol.styled-list {
+    counter-reset: item;
+}
+
+ol.styled-list li {
+    counter-increment: item;
+    padding-left: 32px;
+    position: relative;
+    margin-bottom: 12px;
+    font-family: var(--font-primary);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #1F1F1F;
+}
+
+ol.styled-list li::before {
+    content: counter(item) ".";
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Маркированный список (характеристики) */
+ul.styled-list li {
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 12px;
+    font-family: var(--font-primary);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #1F1F1F;
+}
+
+ul.styled-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #1f1f1f;
+    flex-shrink: 0;
+}
+
+ul.styled-list li strong {
+    font-weight: 700;
+}
+
+/* ============================================
+   АДАПТИВ
+   ============================================ */
+@media (max-width: 768px) {
+    ol.styled-list li,
+    ul.styled-list li {
+        font-size: 15px;
+        line-height: 22px;
+        margin-bottom: 10px;
     }
 
-    .play-button svg {
-        width: 22px;
-        height: 22px;
+    ol.styled-list li {
+        padding-left: 28px;
+    }
+
+    ul.styled-list li {
+        padding-left: 18px;
+    }
+
+    ul.styled-list li::before {
+        width: 6px;
+        height: 6px;
+        top: 9px;
     }
 }

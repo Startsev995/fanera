@@ -56,6 +56,8 @@
 
     <!-- ===== Стили "История" ===== -->
     <link rel="stylesheet" href="css/history.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/article-detail.css">
 </head>
 <body>
 
@@ -151,7 +153,7 @@
         <section class="history-hero">
             <div class="container-custom">
                 <div class="hero-image">
-                    <img src="https://placehold.co/1200x354/104422/FFFFFF?text=История+комбината" alt="История Жешартского фанерного комбината" itemprop="image">
+                    <img src="./image/33.png" alt="История Жешартского фанерного комбината" itemprop="image">
                 </div>
             </div>
         </section>
@@ -161,7 +163,7 @@
             <div class="container-custom">
                 <div class="row">
                     <!-- Левая колонка: таймлайн -->
-                    <div class="col-lg-8">
+                    <div class="col-lg-8 mb-5">
                         <div class="history-header">
                             <h1 class="page-title" itemprop="headline">История</h1>
                         </div>
@@ -252,25 +254,42 @@
                         <!-- Навигация -->
                         <div class="sidebar-nav">
                             <div class="nav-block">
-                                <div class="nav-title">О компании</div>
-                                <a href="history.html" class="nav-link-item active">История компании</a>
-                                <a href="management.html" class="nav-link-item">Руководство</a>
-                                <a href="#" class="nav-link-item">Производство</a>
-                                <a href="#" class="nav-link-item">Документы</a>
-                                <a href="#" class="nav-link-item">Сотрудничество</a>
+                                <div class="nav-title active">О компании</div>
+                                <a href="history.html" class="nav-link-item active">
+                                    История компании
+                                    <span class="nav-arrow">→</span>
+                                </a>
+                                <a href="management.html" class="nav-link-item">
+                                    Руководство
+                                    <span class="nav-arrow">→</span>
+                                </a>
+                                <a href="production.html" class="nav-link-item">
+                                    Производство
+                                    <span class="nav-arrow">→</span>
+                                </a>
+                                <a href="#" class="nav-link-item">
+                                    Документы
+                                    <span class="nav-arrow">→</span>
+                                </a>
+                                <a href="#" class="nav-link-item">
+                                    Сотрудничество
+                                    <span class="nav-arrow">→</span>
+                                </a>
                             </div>
                         </div>
 
                         <!-- Контакты -->
-                        <div class="sidebar-contacts mt-3">
-                            <h4 class="contacts-title">Отдел</h4>
-                            <p class="contacts-subtitle">Консультация специалистов по вопросам</p>
+                        <div class="sidebar-contacts">
+                            <h4 class="contacts-title">Отдел продаж</h4>
+                            <p class="contacts-subtitle">Консультация специалистов по вопросам оформления заказа</p>
 
                             <div class="contact-label">Электронная почта</div>
-                            <div class="contact-value">+ 7 912 140 10 08</div>
+                            <a href="tel:+ 7 912 140 10 08" class="contact-value">+ 7 912 140 10 08</a>
 
                             <div class="contact-label">Электронная почта</div>
-                            <div class="contact-value">sales@plyplant.com</div>
+                            <a href="mailto:sales@plyplant.com" class="contact-value">sales@plyplant.com</a>
+
+                            <button class="contact-btn">Написать нам</button>
                         </div>
 
                         <!-- Написать нам -->

@@ -351,3 +351,106 @@
         height: 22px;
     }
 }
+
+/* ============================================
+   КАРТА НА ВСЮ ШИРИНУ
+   ============================================ */
+.about-map-full {
+    width: 100%;
+    background: #F4F4F4;
+}
+
+.about-map-full .map-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.about-map-full .map-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+/* ============================================
+   НАВИГАЦИЯ В САЙДБАРЕ СО СТРЕЛКАМИ
+   ============================================ */
+.sidebar-nav .nav-block {
+    padding: 19px 37px;
+    background: #F4F4F4;
+    border-radius: 20px;
+    text-align: left;
+}
+
+.sidebar-nav .nav-block .nav-title {
+    font-family: var(--font-primary);
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 17px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--color-accent-light);
+}
+
+.sidebar-nav .nav-block .nav-link-item {
+    font-family: var(--font-primary);
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--color-text);
+    padding: 8px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: var(--transition-default);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.sidebar-nav .nav-block .nav-link-item:last-child {
+    border-bottom: none;
+}
+
+.sidebar-nav .nav-block .nav-link-item:hover {
+    color: var(--color-accent-light);
+}
+
+.sidebar-nav .nav-block .nav-link-item .nav-arrow {
+    color: var(--color-accent-light);
+    font-size: 18px;
+    transition: var(--transition-default);
+}
+
+.sidebar-nav .nav-block .nav-link-item:hover .nav-arrow {
+    transform: translateX(4px);
+}
+
+/* ============================================
+   АДАПТИВ
+   ============================================ */
+@media (max-width: 992px) {
+    .sidebar-nav .nav-block {
+        padding: 16px 24px;
+    }
+
+    .about-map-full .map-container img {
+        max-height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-map-full .map-container img {
+        max-height: 200px;
+    }
+
+    .sidebar-nav .nav-block .nav-title {
+        font-size: 16px;
+    }
+
+    .sidebar-nav .nav-block .nav-link-item {
+        font-size: 16px;
+        padding: 6px 0;
+    }
+
+    .sidebar-nav .nav-block .nav-link-item .nav-arrow {
+        font-size: 16px;
+    }
+}

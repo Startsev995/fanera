@@ -64,6 +64,7 @@
 
     <!-- ===== Стили "О компании" ===== -->
     <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/article-detail.css">
 </head>
 <body>
 
@@ -152,7 +153,7 @@
         <section class="about-hero">
             <div class="container-custom">
                 <div class="hero-image">
-                    <img src="https://placehold.co/1200x354/104422/FFFFFF?text=Жешартский+фанерный+комбинат" alt="Жешартский фанерный комбинат" itemprop="image">
+                    <img src="./image/33.png" alt="Жешартский фанерный комбинат" itemprop="image">
                 </div>
             </div>
         </section>
@@ -170,7 +171,7 @@
 
                         <!-- Видео -->
                         <div class="video-wrapper mt-4">
-                            <img class="video-image" src="https://placehold.co/783x403/104422/FFFFFF?text=Видео+о+компании" alt="Видео о компании">
+                            <img class="video-image" src="./image/33.png" alt="Видео о компании">
                             <div class="play-button">
                                 <svg viewBox="0 0 28 28" fill="none">
                                     <path d="M20.69 13.24L9.69 6.24C9.25 5.96 8.69 6.28 8.69 6.76V20.76C8.69 21.24 9.25 21.56 9.69 21.28L20.69 14.28C21.09 14.03 21.09 13.49 20.69 13.24Z" fill="white"/>
@@ -194,49 +195,65 @@
                                 Текст краткое описание раздела Текст краткое описание раздела Текст краткое описание раздела Текст краткое описание раздела Текст краткое описание раздела Текст краткое описание раздела Текст краткое описание раздела Текст краткое описание раздела Текст краткое описание раздела Текст краткое описание раздела Текст краткое описание раздела Текст краткое описание раздела Текст краткое описание раздела Текст краткое описание раздела Текст краткое описание раздела Текст краткое описание раздела Текст краткое описание раздела Текст краткое описание раздела
                             </p>
                         </div>
-
-                        <!-- Карта (заглушка) -->
-                        <div class="about-section">
-                            <div style="background: #F4F4F4; border-radius: var(--radius-md); padding: 40px; text-align: center; min-height: 400px; display: flex; align-items: center; justify-content: center;">
-                                <span style="font-family: var(--font-primary); font-size: 18px; color: rgba(0,0,0,0.3);">Карта географии сбыта (интерактивная карта)</span>
-                            </div>
-                        </div>
                     </div>
 
-                    <!-- Правая колонка: сайдбар -->
+                    <!-- Правая колонка: навигация -->
                     <div class="col-lg-4">
-                        <!-- Навигация -->
                         <div class="sidebar-nav">
                             <div class="nav-block">
-                                <div class="nav-title">О компании</div>
-                                <a href="#" class="nav-link-item">История компании</a>
-                                <a href="#" class="nav-link-item">Руководство</a>
-                                <a href="#" class="nav-link-item">Производство</a>
-                                <a href="#" class="nav-link-item">Документы</a>
-                                <a href="#" class="nav-link-item">Сотрудничество</a>
+                                <div class="nav-title active">О компании</div>
+                                <a href="history.html" class="nav-link-item">
+                                    История компании
+                                    <span class="nav-arrow">→</span>
+                                </a>
+                                <a href="management.html" class="nav-link-item">
+                                    Руководство
+                                    <span class="nav-arrow">→</span>
+                                </a>
+                                <a href="production.html" class="nav-link-item">
+                                    Производство
+                                    <span class="nav-arrow">→</span>
+                                </a>
+                                <a href="#" class="nav-link-item">
+                                    Документы
+                                    <span class="nav-arrow">→</span>
+                                </a>
+                                <a href="#" class="nav-link-item">
+                                    Сотрудничество
+                                    <span class="nav-arrow">→</span>
+                                </a>
                             </div>
                         </div>
 
                         <!-- Контакты -->
-                        <div class="sidebar-contacts mt-3">
-                            <h4 class="contacts-title">Отдел</h4>
-                            <p class="contacts-subtitle">Консультация специалистов по вопросам</p>
+                        <div class="sidebar-contacts">
+                            <h4 class="contacts-title">Отдел продаж</h4>
+                            <p class="contacts-subtitle">Консультация специалистов по вопросам оформления заказа</p>
 
                             <div class="contact-label">Электронная почта</div>
-                            <div class="contact-value">+ 7 912 140 10 08</div>
+                            <a href="tel:+ 7 912 140 10 08" class="contact-value">+ 7 912 140 10 08</a>
 
                             <div class="contact-label">Электронная почта</div>
-                            <div class="contact-value">sales@plyplant.com</div>
+                            <a href="mailto:sales@plyplant.com" class="contact-value">sales@plyplant.com</a>
+
+                            <button class="contact-btn">Написать нам</button>
                         </div>
 
                         <!-- Написать нам -->
-                        <div class="sidebar-write mt-3">
+                        <div class="sidebar-write mt-4">
                             <h4 class="write-title">Написать нам</h4>
                             <p class="write-subtitle">Консультация специалистов по вопросам оформления заказа</p>
                             <button class="write-btn">Написать нам</button>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- ===== КАРТА НА ВСЮ ШИРИНУ ===== -->
+        <section class="about-map-full">
+            <div class="map-container">
+                <img src="./image/map.png" alt="Карта географии сбыта">
             </div>
         </section>
 
