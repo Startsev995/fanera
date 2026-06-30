@@ -88,7 +88,18 @@
     <link rel="stylesheet" href="css/common.css">
 
     <!-- ===== Стили каталога ===== -->
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/article-detail.css">
     <link rel="stylesheet" href="css/catalog.css">
+    <link rel="stylesheet" href="css/contacts.css">
+    <link rel="stylesheet" href="css/documents.css">
+    <link rel="stylesheet" href="css/history.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/management.css">
+    <link rel="stylesheet" href="css/news-detail.css">
+    <link rel="stylesheet" href="css/press.css">
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/production.css">
 </head>
 <body>
 
@@ -100,7 +111,7 @@
         <header class="header-custom">
             <div class="container-custom">
                 <div class="row align-items-center">
-                    <div class="col-lg-4 col-md-5">
+                    <div class="col-lg-3 col-md-4">
                         <div class="logo-header">
                             <div class="logo-squares">
                                 <a href="/">
@@ -173,7 +184,7 @@
             <div class="container-custom">
                 <div class="row">
                     <!-- Карточка 1: Фанера ФК -->
-                    <a href="" class="col-lg-3 col-md-6 mb-4">
+                    <a href="product.html" class="col-lg-3 col-md-6 mb-4">
                         <div class="card-catalog">
                             <div class="card-image">
                                 <img src="./image/product-1.png" alt="Фанера ФК">
@@ -189,7 +200,7 @@
                     </a>
 
                     <!-- Карточка 2: Фанера FSF -->
-                    <a href="" class="col-lg-3 col-md-6 mb-4">
+                    <a href="product.html" class="col-lg-3 col-md-6 mb-4">
                         <div class="card-catalog">
                             <div class="card-image">
                                 <img src="./image/product-1.png" alt="Фанера FSF">
@@ -205,7 +216,7 @@
                     </a>
 
                     <!-- Карточка 3: Фанера ламинированная -->
-                    <a href="" class="col-lg-3 col-md-6 mb-4">
+                    <a href="product.html" class="col-lg-3 col-md-6 mb-4">
                         <div class="card-catalog">
                             <div class="card-image">
                                 <img src="./image/product-2.png" alt="Фанера ламинированная">
@@ -221,7 +232,7 @@
                     </a>
 
                     <!-- Карточка 4: Террасная доска -->
-                    <a href="" class="col-lg-3 col-md-6 mb-4">
+                    <a href="product.html" class="col-lg-3 col-md-6 mb-4">
                         <div class="card-catalog">
                             <div class="card-image">
                                 <img src="./image/product-3.png" alt="Террасная доска">
@@ -262,22 +273,24 @@
         ======================================== -->
         <footer class="footer-custom" itemscope itemtype="https://schema.org/WPFooter">
             <div class="container-custom">
+                <!-- Верхняя часть: меню + контакты в один ряд -->
                 <div class="footer-top">
+                    <!-- Левая часть: меню -->
                     <div class="footer-menu">
                         <div class="footer-col">
                             <div class="footer-title">О компании</div>
-                            <a href="#" class="footer-link">Вопрос ответ</a>
-                            <a href="#" class="footer-link">Каталог</a>
-                            <a href="#" class="footer-link">Новости</a>
+                            <a href="about.html" class="footer-link">Вопрос ответ</a>
+                            <a href="catalog.html" class="footer-link">Каталог</a>
+                            <a href="press.html" class="footer-link">Новости</a>
                             <a href="#" class="footer-link">Фотогалерея</a>
                         </div>
 
                         <div class="footer-col">
                             <div class="footer-title">Покупателям</div>
-                            <a href="#" class="footer-link">МДФ</a>
-                            <a href="#" class="footer-link">Фанера</a>
-                            <a href="#" class="footer-link">Террасная доска</a>
-                            <a href="#" class="footer-link">Террасная доска</a>
+                            <a href="product.html" class="footer-link">МДФ</a>
+                            <a href="product.html" class="footer-link">Фанера</a>
+                            <a href="product.html" class="footer-link">Террасная доска</a>
+                            <a href="product.html" class="footer-link">Террасная доска</a>
                         </div>
 
                         <div class="footer-col">
@@ -289,16 +302,17 @@
                         </div>
                     </div>
 
+                    <!-- Правая часть: контакты -->
                     <div class="footer-contacts">
                         <div class="footer-contact-col">
                             <div class="footer-title">Отдел сбыта</div>
-                            <div class="footer-phone">+7 912 140 10 08</div>
+                            <a href="tel:+7 912 140 10 08" class="footer-phone">+7 912 140 10 08</a>
                             <a href="mailto:zavod@zhlpk.ru" class="footer-email">zavod@zhlpk.ru</a>
                         </div>
 
                         <div class="footer-contact-col">
                             <div class="footer-title">Отдел</div>
-                            <div class="footer-phone">+7 912 140 10 08</div>
+                            <a href="tel:+7 912 140 10 08" class="footer-phone">+7 912 140 10 08</a>
                             <a href="mailto:zavod@zhlpk.ru" class="footer-email">zavod@zhlpk.ru</a>
                         </div>
 
@@ -308,20 +322,23 @@
                             <div class="footer-social">
                                 <span class="footer-social-label">Мы в соцсетях</span>
                                 <div class="footer-social-icons">
-                                    <span class="social-icon social-icon-vk"></span>
-                                    <span class="social-icon social-icon-tg"></span>
-                                    <span class="social-icon"></span>
-                                    <span class="social-icon"></span>
-                                    <span class="social-icon"></span>
+                                    <a href="" class="social-icon social-icon-vk"></a>
+                                    <a href="" class="social-icon social-icon-tg"></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- Нижняя часть: копирайт -->
                 <div class="footer-bottom">
-                    <span class="footer-copy">© 2026. Жешартский фанерный комбинат</span>
-                    <span class="footer-copy footer-links">Документы • Противодействие коррупции • Политика конфиденциальности • Карта сайта</span>
+                    <a class="footer-copy">© 2026. Жешартский фанерный завод</a>
+                    <div class="col-lg-8">
+                        <a href="documents.html" class="footer-copy footer-links">Документы</a>
+                        <a href="#" class="footer-copy footer-links">• Противодействие коррупции</a>
+                        <a href="#" class="footer-copy footer-links">• Политика конфиденциальности</a>
+                        <a href="#" class="footer-copy footer-links">• Карта сайта</a>
+                    </div>
                 </div>
             </div>
         </footer>

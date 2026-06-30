@@ -120,136 +120,24 @@
     margin-top: 8px;
 }
 
-/* Боковая навигация */
-.sidebar-nav {
-    display: flex;
-    flex-direction: column;
-    gap: 26px;
-}
-
-.sidebar-nav .nav-block {
-    padding: 19px 37px;
-    background: #F4F4F4;
-    border-radius: 20px;
-    text-align: center;
-}
-
-.sidebar-nav .nav-block .nav-title {
-    font-family: var(--font-primary);
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--color-text);
-    margin-bottom: 17px;
-}
-
-.sidebar-nav .nav-block .nav-link-item {
-    font-family: var(--font-primary);
-    font-size: 18px;
-    font-weight: 400;
-    color: var(--color-text);
-    padding: 4px 0;
-    display: block;
-    transition: var(--transition-default);
-}
-
-.sidebar-nav .nav-block .nav-link-item:hover {
-    color: var(--color-accent-light);
-}
-
-/* Блок контактов в сайдбаре */
-.sidebar-contacts {
-    padding: 16px 20px 22px;
-    background: rgba(31, 31, 31, 0.05);
-    border-radius: var(--radius-md);
-}
-
-.sidebar-contacts .contacts-title {
-    font-family: var(--font-primary);
-    font-size: 26px;
-    font-weight: 600;
-    line-height: 32px;
-    color: rgba(0, 0, 0, 0.2);
-    margin-bottom: 12px;
-}
-
-.sidebar-contacts .contacts-subtitle {
-    font-family: var(--font-primary);
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 22px;
-    color: rgba(31, 31, 31, 0.8);
-    margin-bottom: 15px;
-}
-
-.sidebar-contacts .contact-label {
-    font-family: var(--font-primary);
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 18px;
-    color: rgba(31, 31, 31, 0.8);
-    margin-bottom: 4px;
-}
-
-.sidebar-contacts .contact-value {
-    font-family: var(--font-primary);
-    font-size: 22px;
-    font-weight: 500;
-    line-height: 28px;
-    color: #1F1F1F;
-    margin-bottom: 15px;
-}
-
-.sidebar-contacts .contact-value:last-of-type {
-    margin-bottom: 0;
-}
-
-/* Блок "Написать нам" */
-.sidebar-write {
-    padding: 16px 18px 20px;
-    background: var(--color-accent);
-    border-radius: var(--radius-md);
-}
-
-.sidebar-write .write-title {
-    font-family: var(--font-primary);
-    font-size: 26px;
-    font-weight: 600;
-    line-height: 32px;
-    color: var(--color-white);
-    margin-bottom: 8px;
-}
-
-.sidebar-write .write-subtitle {
-    font-family: var(--font-primary);
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 22px;
-    color: rgba(255, 255, 255, 0.8);
-    margin-bottom: 18px;
-}
-
-.sidebar-write .write-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 16px 24px;
-    background: var(--color-white);
-    border-radius: 7px;
-    font-family: var(--font-primary);
-    font-size: 17px;
-    font-weight: 600;
-    line-height: 22.44px;
-    color: var(--color-accent);
-    border: none;
-    cursor: pointer;
-    transition: var(--transition-default);
+/* ============================================
+   КАРТА НА ВСЮ ШИРИНУ
+   ============================================ */
+.about-map-full {
     width: 100%;
-    max-width: 332px;
+    background: #F4F4F4;
 }
 
-.sidebar-write .write-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+.about-map-full .map-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.about-map-full .map-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
 }
 
 /* ============================================
@@ -281,20 +169,12 @@
         line-height: 38px;
     }
 
-    .sidebar-nav {
-        margin-top: 40px;
-    }
-
-    .sidebar-nav .nav-block {
-        padding: 16px 24px;
-    }
-
-    .sidebar-write .write-btn {
-        max-width: 100%;
-    }
-
     .video-wrapper {
         max-width: 100%;
+    }
+
+    .about-map-full .map-container img {
+        max-height: 300px;
     }
 }
 
@@ -319,29 +199,6 @@
         line-height: 24px;
     }
 
-    .sidebar-nav .nav-block .nav-title {
-        font-size: 16px;
-    }
-
-    .sidebar-nav .nav-block .nav-link-item {
-        font-size: 16px;
-    }
-
-    .sidebar-contacts .contacts-title {
-        font-size: 22px;
-        line-height: 28px;
-    }
-
-    .sidebar-contacts .contact-value {
-        font-size: 18px;
-        line-height: 24px;
-    }
-
-    .sidebar-write .write-title {
-        font-size: 22px;
-        line-height: 28px;
-    }
-
     .video-wrapper .play-button {
         padding: 24px;
     }
@@ -350,107 +207,8 @@
         width: 22px;
         height: 22px;
     }
-}
 
-/* ============================================
-   КАРТА НА ВСЮ ШИРИНУ
-   ============================================ */
-.about-map-full {
-    width: 100%;
-    background: #F4F4F4;
-}
-
-.about-map-full .map-container {
-    width: 100%;
-    overflow: hidden;
-}
-
-.about-map-full .map-container img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    display: block;
-}
-
-/* ============================================
-   НАВИГАЦИЯ В САЙДБАРЕ СО СТРЕЛКАМИ
-   ============================================ */
-.sidebar-nav .nav-block {
-    padding: 19px 37px;
-    background: #F4F4F4;
-    border-radius: 20px;
-    text-align: left;
-}
-
-.sidebar-nav .nav-block .nav-title {
-    font-family: var(--font-primary);
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--color-text);
-    margin-bottom: 17px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid var(--color-accent-light);
-}
-
-.sidebar-nav .nav-block .nav-link-item {
-    font-family: var(--font-primary);
-    font-size: 18px;
-    font-weight: 400;
-    color: var(--color-text);
-    padding: 8px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: var(--transition-default);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.sidebar-nav .nav-block .nav-link-item:last-child {
-    border-bottom: none;
-}
-
-.sidebar-nav .nav-block .nav-link-item:hover {
-    color: var(--color-accent-light);
-}
-
-.sidebar-nav .nav-block .nav-link-item .nav-arrow {
-    color: var(--color-accent-light);
-    font-size: 18px;
-    transition: var(--transition-default);
-}
-
-.sidebar-nav .nav-block .nav-link-item:hover .nav-arrow {
-    transform: translateX(4px);
-}
-
-/* ============================================
-   АДАПТИВ
-   ============================================ */
-@media (max-width: 992px) {
-    .sidebar-nav .nav-block {
-        padding: 16px 24px;
-    }
-
-    .about-map-full .map-container img {
-        max-height: 300px;
-    }
-}
-
-@media (max-width: 768px) {
     .about-map-full .map-container img {
         max-height: 200px;
-    }
-
-    .sidebar-nav .nav-block .nav-title {
-        font-size: 16px;
-    }
-
-    .sidebar-nav .nav-block .nav-link-item {
-        font-size: 16px;
-        padding: 6px 0;
-    }
-
-    .sidebar-nav .nav-block .nav-link-item .nav-arrow {
-        font-size: 16px;
     }
 }

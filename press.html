@@ -68,7 +68,18 @@
     <link rel="stylesheet" href="css/common.css">
 
     <!-- ===== Стили пресс-службы ===== -->
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/article-detail.css">
+    <link rel="stylesheet" href="css/catalog.css">
+    <link rel="stylesheet" href="css/contacts.css">
+    <link rel="stylesheet" href="css/documents.css">
+    <link rel="stylesheet" href="css/history.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/management.css">
+    <link rel="stylesheet" href="css/news-detail.css">
     <link rel="stylesheet" href="css/press.css">
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/production.css">
 </head>
 <body>
 
@@ -94,11 +105,9 @@
                     <div class="col-lg-3 col-md-4">
                         <div class="logo-header">
                             <div class="logo-squares">
-                                <div class="sq"></div>
-                                <div class="sq"></div>
-                                <div class="sq"></div>
-                                <div class="sq"></div>
-                                <div class="sq-overlay"></div>
+                                <a href="/">
+                                    <img src="./svg/logo-header.svg">
+                                </a>
                             </div>
                             <div class="logo-text" itemprop="name">Жешартский фанерный комбинат</div>
                         </div>
@@ -116,7 +125,7 @@
             <div class="container-custom">
                 <ul class="nav">
                     <li class="nav-item">
-                        <a class="nav-link-custom" href="index.html">О компании</a>
+                        <a class="nav-link-custom" href="about.html">О компании</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link-custom" href="catalog.html">Каталог возможностей</a>
@@ -125,7 +134,7 @@
                         <a class="nav-link-custom active" href="press.html">Пресс-служба</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link-custom" href="#">Контакты</a>
+                        <a class="nav-link-custom" href="contacts.html">Контакты</a>
                     </li>
                 </ul>
             </div>
@@ -186,7 +195,7 @@
                     </a>
 
                     <!-- Новость 2 (Статья) -->
-                    <a href="news-detail.html" class="col-lg-3 col-md-6 mb-4 card-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a href="article-detail.html" class="col-lg-3 col-md-6 mb-4 card-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                         <meta itemprop="position" content="2">
                         <article class="card-news" itemscope itemtype="https://schema.org/NewsArticle">
                             <div class="card-image">
@@ -327,64 +336,71 @@
         <!-- ========== ФУТЕР ========== -->
         <footer class="footer-custom" itemscope itemtype="https://schema.org/WPFooter">
             <div class="container-custom">
-                <div class="row">
-                    <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-                        <div class="footer-title">О компании</div>
-                        <a href="#" class="footer-link">Вопрос ответ</a>
-                        <a href="#" class="footer-link">Каталог</a>
-                        <a href="#" class="footer-link">Новости</a>
-                        <a href="#" class="footer-link">Фотогалерея</a>
-                    </div>
-                    <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
-                        <div class="footer-title">Покупателям</div>
-                        <a href="#" class="footer-link">МДФ</a>
-                        <a href="#" class="footer-link">Фанера</a>
-                        <a href="#" class="footer-link">Террасная доска</a>
-                    </div>
-                    <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
-                        <div class="footer-title">Разделы</div>
-                        <a href="#" class="footer-link">Раздел 1</a>
-                        <a href="#" class="footer-link">Раздел 2</a>
-                        <a href="#" class="footer-link">Раздел 3</a>
-                        <a href="#" class="footer-link">Раздел 4</a>
-                    </div>
-                    <div class="col-lg-5 col-md-6">
-                        <div class="row">
-                            <div class="col-6">
-                                <div class="footer-title">Отдел сбыта</div>
-                                <div class="footer-phone">+7 912 140 10 08</div>
-                                <a href="mailto:zavod@zhlpk.ru" class="footer-email">zavod@zhlpk.ru</a>
-                            </div>
-                            <div class="col-6">
-                                <div class="footer-title">Отдел</div>
-                                <div class="footer-phone">+7 912 140 10 08</div>
-                                <a href="mailto:zavod@zhlpk.ru" class="footer-email">zavod@zhlpk.ru</a>
-                            </div>
+                <!-- Верхняя часть: меню + контакты в один ряд -->
+                <div class="footer-top">
+                    <!-- Левая часть: меню -->
+                    <div class="footer-menu">
+                        <div class="footer-col">
+                            <div class="footer-title">О компании</div>
+                            <a href="about.html" class="footer-link">Вопрос ответ</a>
+                            <a href="catalog.html" class="footer-link">Каталог</a>
+                            <a href="press.html" class="footer-link">Новости</a>
+                            <a href="#" class="footer-link">Фотогалерея</a>
                         </div>
-                        <div class="mt-3">
+
+                        <div class="footer-col">
+                            <div class="footer-title">Покупателям</div>
+                            <a href="product.html" class="footer-link">МДФ</a>
+                            <a href="product.html" class="footer-link">Фанера</a>
+                            <a href="product.html" class="footer-link">Террасная доска</a>
+                            <a href="product.html" class="footer-link">Террасная доска</a>
+                        </div>
+
+                        <div class="footer-col">
+                            <div class="footer-title">Разделы</div>
+                            <a href="#" class="footer-link">Раздел 1</a>
+                            <a href="#" class="footer-link">Раздел 2</a>
+                            <a href="#" class="footer-link">Раздел 3</a>
+                            <a href="#" class="footer-link">Раздел 4</a>
+                        </div>
+                    </div>
+
+                    <!-- Правая часть: контакты -->
+                    <div class="footer-contacts">
+                        <div class="footer-contact-col">
+                            <div class="footer-title">Отдел сбыта</div>
+                            <a href="tel:+7 912 140 10 08" class="footer-phone">+7 912 140 10 08</a>
+                            <a href="mailto:zavod@zhlpk.ru" class="footer-email">zavod@zhlpk.ru</a>
+                        </div>
+
+                        <div class="footer-contact-col">
+                            <div class="footer-title">Отдел</div>
+                            <a href="tel:+7 912 140 10 08" class="footer-phone">+7 912 140 10 08</a>
+                            <a href="mailto:zavod@zhlpk.ru" class="footer-email">zavod@zhlpk.ru</a>
+                        </div>
+
+                        <div class="footer-location">
                             <div class="footer-title">Адрес</div>
                             <div class="footer-address">169045, Россия, Республика Коми, п. Жешарт, ул. Гагарина, д. 1</div>
-                            <div class="d-flex align-items-center gap-3 mt-2 flex-wrap">
-                                <span class="footer-address">Мы в соцсетях</span>
-                                <div class="d-flex">
-                                    <span class="social-icon"></span>
-                                    <span class="social-icon"></span>
-                                    <span class="social-icon"></span>
-                                    <span class="social-icon"></span>
-                                    <span class="social-icon"></span>
+                            <div class="footer-social">
+                                <span class="footer-social-label">Мы в соцсетях</span>
+                                <div class="footer-social-icons">
+                                    <a href="" class="social-icon social-icon-vk"></a>
+                                    <a href="" class="social-icon social-icon-tg"></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="footer-divider d-flex flex-wrap justify-content-between align-items-center">
-                    <div class="footer-copy">© 2026. Жешартский фанерный комбинат</div>
-                    <div class="footer-copy text-center">
-                        Документы • Противодействие коррупции • Политика конфиденциальности • Карта сайта
-                    </div>
-                    <div class="footer-copy text-right">
-                        <!-- placeholder -->
+                <!-- Нижняя часть: копирайт -->
+                <div class="footer-bottom">
+                    <a class="footer-copy">© 2026. Жешартский фанерный завод</a>
+                    <div class="col-lg-8">
+                        <a href="documents.html" class="footer-copy footer-links">Документы</a>
+                        <a href="#" class="footer-copy footer-links">• Противодействие коррупции</a>
+                        <a href="#" class="footer-copy footer-links">• Политика конфиденциальности</a>
+                        <a href="#" class="footer-copy footer-links">• Карта сайта</a>
                     </div>
                 </div>
             </div>

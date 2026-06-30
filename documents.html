@@ -49,9 +49,18 @@
     <link rel="stylesheet" href="css/common.css">
 
     <!-- ===== Стили документов ===== -->
-    <link rel="stylesheet" href="css/documents.css">
     <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/article-detail.css">
+    <link rel="stylesheet" href="css/catalog.css">
+    <link rel="stylesheet" href="css/contacts.css">
+    <link rel="stylesheet" href="css/documents.css">
+    <link rel="stylesheet" href="css/history.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/management.css">
+    <link rel="stylesheet" href="css/news-detail.css">
+    <link rel="stylesheet" href="css/press.css">
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/production.css">
 </head>
 <body>
 
@@ -66,18 +75,16 @@
                     <div class="col-lg-3 col-md-4">
                         <div class="logo-header">
                             <div class="logo-squares">
-                                <div class="sq"></div>
-                                <div class="sq"></div>
-                                <div class="sq"></div>
-                                <div class="sq"></div>
-                                <div class="sq-overlay"></div>
+                                <a href="/">
+                                    <img src="./svg/logo-header.svg">
+                                </a>
                             </div>
-                            <div class="logo-text">Жешартский фанерный комбинат</div>
+                            <div class="logo-text" itemprop="name">Жешартский фанерный комбинат</div>
                         </div>
                     </div>
                     <div class="col-lg-9 col-md-8 text-md-right mt-3 mt-md-0">
-                        <div class="header-phone">+7 (8212) 63-02-18</div>
-                        <div class="header-address">Республика Коми, п. Жешарт, ул. Гагарина, д. 1</div>
+                        <div class="header-phone" itemprop="telephone">+7 (8212) 63-02-18</div>
+                        <div class="header-address" itemprop="address">Республика Коми, п. Жешарт, ул. Гагарина, д. 1</div>
                     </div>
                 </div>
             </div>
@@ -363,7 +370,7 @@
         ======================================== -->
         <section class="documents-map-full">
             <div class="map-container">
-                <img src="https://placehold.co/1920x500/D9D9D9/1A1B22?text=Карта+географии+сбыта" alt="Карта географии сбыта">
+                <img src="./image/map.png" alt="Карта географии сбыта">
             </div>
         </section>
 
@@ -372,22 +379,24 @@
         ======================================== -->
         <footer class="footer-custom" itemscope itemtype="https://schema.org/WPFooter">
             <div class="container-custom">
+                <!-- Верхняя часть: меню + контакты в один ряд -->
                 <div class="footer-top">
+                    <!-- Левая часть: меню -->
                     <div class="footer-menu">
                         <div class="footer-col">
                             <div class="footer-title">О компании</div>
-                            <a href="#" class="footer-link">Вопрос ответ</a>
-                            <a href="#" class="footer-link">Каталог</a>
-                            <a href="#" class="footer-link">Новости</a>
+                            <a href="about.html" class="footer-link">Вопрос ответ</a>
+                            <a href="catalog.html" class="footer-link">Каталог</a>
+                            <a href="press.html" class="footer-link">Новости</a>
                             <a href="#" class="footer-link">Фотогалерея</a>
                         </div>
 
                         <div class="footer-col">
                             <div class="footer-title">Покупателям</div>
-                            <a href="#" class="footer-link">МДФ</a>
-                            <a href="#" class="footer-link">Фанера</a>
-                            <a href="#" class="footer-link">Террасная доска</a>
-                            <a href="#" class="footer-link">Террасная доска</a>
+                            <a href="product.html" class="footer-link">МДФ</a>
+                            <a href="product.html" class="footer-link">Фанера</a>
+                            <a href="product.html" class="footer-link">Террасная доска</a>
+                            <a href="product.html" class="footer-link">Террасная доска</a>
                         </div>
 
                         <div class="footer-col">
@@ -399,16 +408,17 @@
                         </div>
                     </div>
 
+                    <!-- Правая часть: контакты -->
                     <div class="footer-contacts">
                         <div class="footer-contact-col">
                             <div class="footer-title">Отдел сбыта</div>
-                            <div class="footer-phone">+7 912 140 10 08</div>
+                            <a href="tel:+7 912 140 10 08" class="footer-phone">+7 912 140 10 08</a>
                             <a href="mailto:zavod@zhlpk.ru" class="footer-email">zavod@zhlpk.ru</a>
                         </div>
 
                         <div class="footer-contact-col">
                             <div class="footer-title">Отдел</div>
-                            <div class="footer-phone">+7 912 140 10 08</div>
+                            <a href="tel:+7 912 140 10 08" class="footer-phone">+7 912 140 10 08</a>
                             <a href="mailto:zavod@zhlpk.ru" class="footer-email">zavod@zhlpk.ru</a>
                         </div>
 
@@ -418,20 +428,23 @@
                             <div class="footer-social">
                                 <span class="footer-social-label">Мы в соцсетях</span>
                                 <div class="footer-social-icons">
-                                    <span class="social-icon social-icon-vk"></span>
-                                    <span class="social-icon social-icon-tg"></span>
-                                    <span class="social-icon"></span>
-                                    <span class="social-icon"></span>
-                                    <span class="social-icon"></span>
+                                    <a href="" class="social-icon social-icon-vk"></a>
+                                    <a href="" class="social-icon social-icon-tg"></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- Нижняя часть: копирайт -->
                 <div class="footer-bottom">
-                    <span class="footer-copy">© 2026. Жешартский фанерный комбинат</span>
-                    <span class="footer-copy footer-links">Документы • Противодействие коррупции • Политика конфиденциальности • Карта сайта</span>
+                    <a class="footer-copy">© 2026. Жешартский фанерный завод</a>
+                    <div class="col-lg-8">
+                        <a href="documents.html" class="footer-copy footer-links">Документы</a>
+                        <a href="#" class="footer-copy footer-links">• Противодействие коррупции</a>
+                        <a href="#" class="footer-copy footer-links">• Политика конфиденциальности</a>
+                        <a href="#" class="footer-copy footer-links">• Карта сайта</a>
+                    </div>
                 </div>
             </div>
         </footer>

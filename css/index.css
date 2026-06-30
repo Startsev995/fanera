@@ -267,10 +267,6 @@
 /* ============================================
    СЕКЦИЯ ПРОДУКЦИИ
    ============================================ */
-.products-section {
-    padding: 200px 0 0;
-}
-
 .products-header {
     display: flex;
     justify-content: space-between;

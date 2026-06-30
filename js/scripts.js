@@ -139,7 +139,6 @@ $(document).ready(function() {
 
     // Навигация в сайдбаре
     $('.nav-link-item').on('click', function(e) {
-        e.preventDefault();
         $('.nav-link-item').removeClass('active');
         $(this).addClass('active');
     });
