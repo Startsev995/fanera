@@ -357,7 +357,6 @@ ul {
     cursor: pointer;
     transition: var(--transition-default);
     width: 100%;
-    max-width: 332px;
 }
 
 .sidebar-write .write-btn:hover {
